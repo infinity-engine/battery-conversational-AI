@@ -1,0 +1,6 @@
+name: chatBot
+command: bash]
+sync:
+  - .:/app
+forward:
+  - 5006:5006

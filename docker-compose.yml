@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  rasa-server2:
+    image: rasa-server-okteto:latest
+    working_dir: /app
+    build: "./"
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    - ./data:/app/data
+    command: ["rasa","run","--enable-api","--port","5006","--cors","*","--debug"]
+    ports:
+    - '5006:5006'
+    networks:
+    - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
