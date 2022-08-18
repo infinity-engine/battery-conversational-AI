@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  rasa-server2:
+  rasa-server:
     image: rasa-server-okteto:latest
     working_dir: /app
     build: "./"
