@@ -1,91 +1,1876 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: about_chatbot
+    examples: |
+      - who are you
+      - tell me about you
+      - what's up
+      - can i ask about you
+      - tell me something about you
+      - hey dude, how is it going to day
+      - explain yourself
+      - introduce yourself
+      - what's your name
+  - intent: chatbot_inventor
+    examples: |
+      - Who created you
+      - Who invented you
+      - Who created you
+      - Who is your parent
+      - Who invented this battery bot
+      - Who invented this chatbot
+      - Who invented this bot
+      - who made you
+      - who designed you
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hey there
+      - hello there
+      - yo
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - ciao
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - sy
+      - cy
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - okay
+      - okk
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so sad
+      - bad
+      - not doing good
+      - i don't know
+      - :(
+      - i am going crazy
+  # - intent: user_query
+  #   examples: |
+  #     - What do you mean by [battery](question)
+  #     - Explain the meaning of [battery](question)
+  #     - What is a [battery](question)
+  #     - What is [cell degradation](question)
+  #     - What do you mean by [recycling of battery](question)
+  #     - What is [intercalation](question)
+  #     - What is [parasitic voltage](question)
+  - intent: batt_type
+    examples: |
+      - what are different types of battery
+      - what are different types of cell
+      - categories of cells
+      - categories of battery
+      - types
+  - intent: define_batt_type
+    examples: |
+      - define the various types of battery
+      - detail about different types of battery
+      - explain various battery types
+      - difference between different battery types
+  - intent: batt_chem
+    examples: |
+      - types of battery chemistry
+      - chemistry of battery
+      - available chemitries of battery
+      - what are the different chemistry of battery available
+  - intent: common_chem
+    examples: |
+      - most common battery chemistry
+      - which is the most common one
+      - which one is the most common among these
+      - popular chemistry
+      - most popular battery chemistry
+      - battery chemistry adapted worldwide
+      - famous battery chemistry
+  - intent: ideal_char
+    examples: |
+      - ideal characteristics of a battery
+      - most desirable characteristics of a battery
+      - characteristics that make battery popular
+      - ideal battery looks like
+  - intent: battery_definition
+    examples: |
+      - What is a battery
+      - What do you mean by a battery
+      - Define battery
+      - Explain the meaning of battery
+  - intent: batt_components
+    examples: |
+      - different components of a battery
+      - parts of a battery
+      - battery made up of
+      - various components of a battery
+  - intent: define_batt_components
+    examples: |
+      - define various components of battery
+      - function of different parts of a battery
+      - use of different parts of a battery
+      - application of various parts of a battery
+  - intent: invention_time
+    examples: |
+      - when was battery invented
+      - In which year was the battery invented
+      - year
+      - time
+  - intent: inventor_name
+    examples: |
+      - what was the name of scientist who invented battery
+      - name the scientist
+      - who invented battery
+      - who is credited with invention of battery
+      - who is the person behind the invention of battery
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: thermal_management
+    examples: |
+      - I am interested to know about the thermal management of the batteries
+      - What is the thermal management of the battery?
+  - intent: thermal_management_importance
+    examples: |
+      - Why is thermal management important
+      - What is the importance of thermal management
+      - State the importance of thermal management
+  - intent: batt_at_high_temperature
+    examples: |
+      - What happens to the battery at a higher temperature
+      - What is the effect of high temperature on battery
+      - What can happen to a battery at high temperature
+  - intent: thermal_runaway
+    examples: |
+      - What is thermal runaway
+      - What do you mean by thermal runaway
+      - What is meant by thermal runaway
+  - intent: thermal_runaway_trigger
+    examples: |
+      - What triggers thermal runaway
+      - How is thermal runaway triggered
+      - How can thermal runaway happen
+  - intent: thermal_runaway_danger
+    examples: |
+      - Why is thermal runaway dangerous
+      - What is the risk associated with thermal runaway
+  - intent: thermal_runaway_damage
+    examples: |
+      - What damage does thermal runaway cause
+      - What damages can be done by thermal runaway
+  - intent: thermal_runaway_cause
+    examples: |
+      - What causes thermal runaway
+      - What are the other causes of a thermal runaway
+      - What are the reasons behind thermal runaway
+  - intent: low_temperature_impact
+    examples: |
+      - What is the impact of low temperature on the battery
+      - What happens to a battery at low temperature
+      - how does low temperature affect battery performance
+  - intent: lithium_dendrites
+    examples: |
+      - What are lithium dendrites
+      - What do you mean by lithium dendrites
+      - Explain lithium dendrites
+      - Tell me about lithium dendrites
+      - lithium dendrites
+  - intent: lithium_dendrites_formation
+    examples: |
+      - How are lithium dendrites formed
+      - What is the reason for formation of lithium-dendrites
+      - How can lithium dendrites be formed
+      - how is it formed?
+  - intent: lithium_dendrites_impact
+    examples: |
+      - What is the impact of lithium-dendrite on the battery
+      - What are the other impacts of lithium-dendrite on the battery
+      - What is the impact of lithium-dendrite on the battery?
+      - What is the impact
+  - intent: anode_negative_electrode_difference
+    examples: |
+      - Are anode and negative electrode the same
+      - What is the difference between anode and negative electrode
+  - intent: capacity_fade_dendrite
+    examples: |
+      - How does capacity fade happen due to lithium dendrite
+      - How does lithium dendrite cause capacity fade
+      - How is lithium dendrite associated with capacity face
+  - intent: lithium_dendrite_formation_factors
+    examples: |
+      - What factors influence lithium-dendrite formation
+      - What factors are responsible for the formation of lithium dendrite
+  - intent: li_negative_electrode
+    examples: |
+      - Which material is used as the negative electrode in li-batteries
+      - What material is preferred for negative electrode in li batteries
+      - Which materials can serve as negative electrode in li-batteries
+  - intent: li_positive_electrode
+    examples: |
+      - Which material is used to make the positive electrode
+      - What material is preferred for positive electrode in li batteries
+      - Which materials can serve as positive electrode in li-batteries
+  - intent: positive_electrode_types
+    examples: |
+      - What are the various types of positive electrode
+      - How many types of positive electrodes are there
+  - intent: heat_source_li
+    examples: |
+      - What is the primary source of heat in li batteries
+      - What causes heating in Li batteries
+      - What is the reason for heating in Li batteries
+  - intent: polarization_reaction
+    examples: |
+      - What are polarization reactions
+      - Explain polarization reactions
+  - intent: current_impact_on_battery_capacity
+    examples: |
+      - What is the impact of the charging current on the battery capacity
+      - How does charging current affect battery capacity
+      - What is the effect of charging current on battery capacity
+  - intent: battery_operating_limit
+    examples: |
+      - What is the safe operating limit of the battery
+      - What is the working temperature range of battery
+      - What is the minimum and maximum temperature range of battery
+  - intent: low_temp_impact
+    examples: |
+      - What is the impact of low temperature on the battery's performance
+      - How does low temperature affect the battery
+      - What is the effect of low temperature on battery
+  - intent: electrochemical_rk_low_temperature
+    examples: |
+      - Why cannot the electrochemical reactions occur efficiently at low temperatures
+      - What is the effect of low temperature on electrochemical reactions
+  - intent: li_ion_diffusion_rate_impact_battery_capacity
+    examples: |
+      - What is the relation between the diffusion rate of lithium-ions and battery capacity
+      - How does diffusion rate affect the battery capacity
+      - What is the effect of diffusion rate on battery capacity
+  - intent: low_temp_charging
+    examples: |
+      - What happens when the battery is charged at a low temperature
+      - What is the drawback of charging a battery at low temperature
+      - What happens when we charge the battery at low temperature
+  - intent: high_temperature_impact
+    examples: |
+      - What is the impact of high temperature on battery
+      - What happens when the battery is used at high temperatures
+      - How does high temperature affect the battery
+  - intent: internal_temperature_rise
+    examples: |
+      - What is the impact of internal temperature rise on the battery pack
+      - How does rise in internal temperature affect the battery
+      - What is the effect on battery pack if its internal temperature rises
+  - intent: gas_released_internal_temperature_rise
+    examples: |
+      - Which gases can be released
+      - Which gases can be released as the internal cell temperature increases
+      - What are the different gases released when the internal cell temperature rises
+  - intent: high_temperature_impact_capacity_loss
+    examples: |
+      - What is the impact of high temperature on capacity loss
+      - How is capacity of cell affected at high temperature
+      - What effect does high temperature have on the capacityof the cell
+      - What happens to capacity of the cell at high temperature
+  - intent: maintain_internal_temperature
+    examples: |
+      - What are the ways to maintain the battery's internal temperature
+      - How can we maintain the internal temperature of the cell
+      - What can be done to maintain the internal temperature of the cell
+      - How can be keep the internal temperature of the cell constant
+  - intent: heating_technique
+    examples: |
+      - What are the different techniques for heating the battery to maintain its internal temperature
+      - How can we heat the battery to maintain its internal temperature
+      - State the different heating techniques that can be used to maintain the internal temperature of the cell
+      - How can the internal temperature of the cells be kept constant
+  - intent: cooling_technique
+    examples: |
+      - What are the different methods of cooling the batteries
+      - How can the battery be cooled
+      - What are the ways in which we can cool the battery pack
+      - How can we bring the battery pack temperature down
+      - What are the ways to reduce the temperature of the battery pack
+  - intent: common_cooling_technique
+    examples: |
+      - Which is the commonly used cooling technique
+      - What cooling techniques are used for cooling the battery pack
+      - State the different cooling techniques that can be used to cool a battery pack
+  - intent: PCM_full_form
+    examples: |
+      - What does PCM stand for
+      - What is the full form of PCM
+      - What do you mean by PCM
+  - intent: PCM_working
+    examples: |
+      - How does PCM material Work
+      - Explain the principle of working PCM
+      - How does PCM help
+      - What is the theory behind working of PCM
+  - intent: PCM_types
+    examples: |
+      - What are the types of PCM
+      - How is PCM classified
+      - State the different types of PCM
+      - How many types of PCM are present
+  - intent: best_PCM
+    examples: |
+      - What is the best Phase Change Material (PCM)
+      - Which is the most accurate PCM (Phase Change Material)
+      - Among all the PCM materials, which one is the best
+  - intent: PCM_quality_factors
+    examples: |
+      - What factors determine the quality of phase change material (PCM)
+      - Quality of PCM depends on what factors
+      - How can we determine the quality of PCM
+  - intent: PCM_safety
+    examples: |
+      - Are PCM safe
+      - Comment on the safety of PCM
+      - What about the safety of PCM
+      - How safe are PCM
+  - intent: tradeoff_natural_convection
+    examples: |
+      - What are the trade-offs of natural convection
+      - What is the downside of natural convection
+      - What is the drawback of natural convection
+  - intent: tradeoff_air_cooling
+    examples: |
+      - What are the trade-offs of air cooling
+      - What is the downside of air cooling
+      - What is the drawback of air cooling
+  - intent: tradeoff_forced_convection
+    examples: |
+      - What are the trade-offs of forced convection
+      - What is the downside of forced convection
+      - What is the drawback of forced convection
+  - intent: liquid_cooling
+    examples: |
+      - What is liquid cooling of batteries
+      - What do you mean by liquid cooling of battery
+      - Explain liquid cooling
+  - intent: liquid_cool_or_air_cool
+    examples: |
+      - Which is more effective, liquid cooling or air cooling
+      - Which is better between liquid cooling and air cooling
+      - Which is more preferrable between liquid cooling and air cooling
+  - intent: liquid_cooling_methods
+    examples: |
+      - What are the different ways of liquid cooling
+      - How can liquid cooling be implemented
+      - What are the different methods used for liquid cooling
+  - intent: direct_liquid_cooling
+    examples: |
+      - What is direct liquid cooling
+      - What do you mean by direct liquid cooling
+      - Explain direct liquid cooling
+  - intent: direct_liquid_cooling_in_auto
+    examples: |
+      - Is direct liquid cooling used in the automobile industry
+      - Can direct liquid cooling be used in automobiles
+      - What is the application of direct liquid cooling in automobile industry
+      - Can direct liquid cooling be used in the automobile industry
+  - intent: indirect_cooling_methods
+    examples: |
+      - What are indirect cooling methods
+      - What are the different ways of indirect liquid cooling
+      - How can indirect liquid cooling be implemented
+      - What are the different methods used for indirect liquid cooling
+  - intent: direct_indirect_cooling_eff
+    examples: |
+      - Which cooling method among direct and indirect method has the higher efficiency
+      - Which is better between direct and indirect cooling
+      - Which is more preferrable between direct cooling and indirect cooling
+  - intent: why_indirect_cooling_low_eff
+    examples: |
+      - Why the indirect method has the lower efficiency
+      - What is the reason behind low efficiency of indirect cooling method
+      - Explain the reason behind lower efficiency of indirect cooling method
+  - intent: common_liquids_for_cooling
+    examples: |
+      - Which are the commonly used liquids in the liquid cooled system
+      - What are the coolants used for liquid cooled system
+      - What liquids are generally used for liquid cooled system
+  - intent: li_operating_temp
+    examples: |
+      - What is the desired operating temperature for a Li-ion battery
+      - What is the range of temperature for Li-ion battery
+      - What is the working temperature range of Li-ion battery
+      - What is the minimum and maximum working temperature range of Li-ion batteries
+  - intent: can_battery_refrigerant_used
+    examples: |
+      - Can we use refrigerant for cooling battery pack
+      - Is it okay to use refrigerants for cooling battery packs
+      - Can refrigerants be used for cooling battery packs
+      - How safe is it to use refrigerants for cooling the battery packs
+  - intent: DRC
+    examples: |
+      - What does Direct refrigerant cooling means
+      - What do you mean by DRC
+      - Explain Direct refrigerant cooling
+      - What is DRC
+  - intent: LIB_full_form
+    examples: |
+      - What does LIB stand for
+      - What is LIB
+      - What do you mean by LIB
+      - What is the full form of LIB
+  - intent: ESS_full_form
+    examples: |
+      - What does ESS stand for
+      - What do you mean by ESS
+      - What is the full form of ESS
+      - What is ESS
+  - intent: causes_of_fault
+    examples: |
+      - What are the causes of faults in a battery pack
+      - What causes faults in a battery pack
+      - What factors are responsible for fault in a battery pack
+      - State the different reasons behind fault in battery pack
+  - intent: cathode_materials
+    examples: |
+      - What are different types of cathode materials
+      - What are the different materials from which cathode are made
+      - What materials can be used to make cathodes
+      - What are the different materials that can be used for making cathodes
+  - intent: layered_oxides
+    examples: |
+      - What are layered oxides
+      - What do you mean by layered oxides
+      - Explain layered oxides
+      - State the meaning of layered oxides
+  - intent: tradeoff_layered_oxides
+    examples: |
+      - What are the trade-offs of layered oxides
+      - What are the disadvantages of layered oxides
+      - What is the downside of layered oxides
+  - intent: different_layered_oxide_cathodes
+    examples: |
+      - What are the various layered oxide cathodes
+      - How many types of layred oxide cathodes are present
+      - What are the different types of layered oxide cathodes
+  - intent: cathode_in_EV_battery
+    examples: |
+      - What is the common cathode used in EV batteries
+      - Which cathode is used in EV battery
+      - Which type of cathode is used in EV battery
+  - intent: NCM_cathode_composition
+    examples: |
+      - Can you explain the composition of NCM cathode
+      - What is the composition of NCM cathode
+      - State the composition of NCM cathode
+      - What is the NCM cathode composition
+  - intent: tradeoff_nickel_cobalt_manganese
+    examples: |
+      - What are the trade-offs between Nickel, cobalt and manganese
+      - What are the pros and cons of Nickel, cobalt and manganese
+      - What are the advantages and disadvantages of using Nickel, cobalt and Manganese
+  - intent: pros_cons_manganese
+    examples: |
+      - What are the pros and cons of manganese
+      - What are the advantages and disadvantages of manganese
+  - intent: pros_cons_nickel
+    examples: |
+      - What are the advantages and disadvantages of nickel
+      - - What are the pros and cons of nickel
+  - intent: ratio_NiCoMn_commercial_cathodes
+    examples: |
+      - What is the ratio of nickel, cobalt and manganese in commercial cathodes
+      - In which ratio is nickel, cobalt and manganese present in commercial cathodes
+  - intent: spinel_oxide_cathode_examples
+    examples: |
+      - What are the examples of spinel oxide cathodes
+      - Give examples of Spinel oxide cathodes
+      - State some examples of Spinel oxide cathodes
+  - intent: polyanion_oxide_cathode_examples
+    examples: |
+      - What are some polyanion oxide cathode
+      - Give some examples of polyanion oxide cathode
+      - What are some examples of polyanion oxide cathode
+  - intent: common_anode_material
+    examples: |
+      - What is the most common anode material
+      - Which material is commonly used for making anodes
+      - What materials can be used for manufacturing anode
+  - intent: carbonaceous_anode_types
+    examples: |
+      - What are various types of carbonaceous anode
+      - What are some of the carbonaceous anode
+      - What anodes come under carbonaceous anode
+  - intent: SEI_layer
+    examples: |
+      - What is SEI layer
+      - What do you mean by SEI layer
+      - Define SEI layer
+      - What is the meaning of SEI layer
+  - intent: SEI_layer_thickness
+    examples: |
+      - What is the thickness of SEI layer
+      - Define the thickness of SEI layer
+      - How thick is the SEI layer
+  - intent: SEI_composition
+    examples: |
+      - What is the composition of the SEI
+      - Explain the composition of SEI layer
+      - What is SEI layer composed of
+      - What materials make up the SEI layer
+  - intent: SEI_characteristics
+    examples: |
+      - What are the characteristics of the SEI
+      - Explain the characteristics of SEI layer
+      - What are the features of SEI layer
+  - intent: LCO_full_form
+    examples: |
+      - What is LCO
+      - What does LCO stand for
+      - What is the meaning of LCO
+      - Explain LCO chemistry
+      - What do you mean by LCO chemistry
+  - intent: LCO_chemical_formula
+    examples: |
+      - What is the chemical formula of LCO
+      - Write the chemical formula for LCO chemitry
+      - Mention the chemical composition of LCO chemistry
+  - intent: LCO_anode_or_cathode
+    examples: |
+      - Is LCO anode or cathode
+      - Can you say whether LCo is an anode or a cathode
+      - Classify LCO as anode or cathode
+      - Is LCO anode
+      - Is LCO cathode
+  - intent: LCO_cell_voltage
+    examples: |
+      - What is the cell voltage of LCO
+      - cell voltage of LCO
+      - Tell me about the cell voltage of LCO
+      - How much voltage do one LCO cell provide
+  - intent: LCO_battery_energy_density
+    examples: |
+      - What is the energy density of LCO battery
+      - Specify the energy density of LCO battery
+      - Tell me about the energy density of LCO battery
+  - intent: LCO_battery_life_cycle
+    examples: |
+      - What is the life cycle of LCO battery
+      - How long does the LCO battery last
+      - What is the life span of an LCO battery
+      - What is the life expectancy of LCO battery
+  - intent: LMO_full_form
+    examples: |
+      - What does LMO stand for
+      - What is the full form of LMO
+      - What do you understand by LMO
+      - What is the meaning of LMO
+  - intent: LMO_chemical_formula
+    examples: |
+      - What is the chemical formula of LMO
+      - Tell me the chemistry of LMO
+      - Do you know the chemical formula for LMO chemistry
+  - intent: LMO_cell_voltage
+    examples: |
+      - What is the cell voltage of LMO
+      - cell voltage of LMO
+      - Tell me about the cell voltage of LMO
+      - How much voltage do one LMO cell provide
+  - intent: LMO_energy_density
+    examples: |
+      - What is the energy density of LMO
+      - Specify the energy density of LMO battery
+      - Tell me about the energy density of LMO battery
+  - intent: LMO_battery_life_cycle
+    examples: |
+      - What is the life cycle of LMO cell
+      - How long does the LMO battery last
+      - What is the life span of an LMO battery
+      - What is the life expectancy of LMO battery
+  - intent: NCM_full_form
+    examples: |
+      - What is NCM
+      - What is the full form of NCM
+      - What do you understand by NCM
+      - What is the meaning of NCM
+  - intent: NCM_chemical_composition
+    examples: |
+      - What is the chemical composition of NCM
+      - Explain the chemical composition of NCM
+      - What is the chemistry of NCM
+  - intent: clarify_NCM_battery_voltage
+    examples: |
+      - What is the voltage of NCM battery
+      - What is the battery voltage of NCM
+  - intent: NCM_cell_voltage
+    examples: |
+      - what is the voltage of one NCM cell
+      - What is the cell voltage of NCM
+      - Specify the cell voltage of NCM
+      - What is the per cell voltage of NCM
+  - intent: NCM_energy_density
+    examples: |
+      - What is the energy density of NCM cell
+      - Specify the energy density of NCM battery
+      - Tell me about the energy density of NCM battery
+  - intent: NCM_life_cycle
+    examples: |
+      - What is the lifecycle of NCM cell
+      - How long does the NCM battery last
+      - What is the life span of an NCM battery
+      - What is the life expectancy of NCM battery
+  - intent: LFP_full_form
+    examples: |
+      - What is LFP
+      - What is the full form of LFP
+      - What do you understand by LFP
+      - What is the meaning of LFP
+  - intent: LFP_chemical_composition
+    examples: |
+      - What is the chemical composition LFP
+      - Explain the chemical composition of LFP
+      - What is the chemistry of LFP
+  - intent: LFP_cell_voltage
+    examples: |
+      - What is the voltage of LFP cell
+      - What is the cell voltage of LFP
+      - Specify the cell voltage of LFP
+      - What is the per cell voltage of LFP
+  - intent: LFP_energy_density
+    examples: |
+      - What is the energy density of LFP cells
+      - Specify the energy density of LFP battery
+      - Tell me about the energy density of LFP battery
+  - intent: LFP_life_cycle
+    examples: |
+      - What is the life cycle of LFP
+      - How long does the LFP battery last
+      - What is the life span of an LFP battery
+      - What is the life expectancy of LFP battery
+  - intent: LTO_full_form
+    examples: |
+      - What is LTO
+      - What is the full form of LTO
+      - What do you understand by LTO
+      - What is the meaning of LTO
+  - intent: is_LTO_anode
+    examples: |
+      - Is LTO an anode
+      - Is LTO anode or cathode
+      - Clarify whether LTO is an anode or cathode
+  - intent: LTO_chemical_formula
+    examples: |
+      - What is the chemical formula of LTO
+      - Tell me the chemistry of LTO
+      - Do you know the chemical formula for LTO chemistry
+  - intent: cathode_LTO_anode
+    examples: |
+      - What is the cathode that can be used with LTO anode
+      - Which cathode is used with LTO anode
+      - What is the cathode used with LTO anode
+  - intent: LCO_cathode_with_LTO_anode
+    examples: |
+      - Can we us LCO cathode together with LTO anode
+      - Is it possible to use LCO cathode with LTO anode
+      - How can we use LTO anode with LCO cathode
+  - intent: LTO_cell_voltage
+    examples: |
+      - What is the voltage of LTO cell
+      - What is the cell voltage of LTO
+      - Specify the cell voltage of LTO
+      - What is the per cell voltage of LTO
+  - intent: LTO_life_cycle
+    examples: |
+      - What is the life cycle of LTO cells
+      - How long does the LTO battery last
+      - What is the life span of an LTO battery
+      - What is the life expectancy of LTO battery
+  - intent: LTO_specific_energy
+    examples: |
+      - What is the specific energy of LTO cells
+      - Specify the specific energy of LTO cells
+      - How much specific energy does LTO cells have
+      - Quantize the specific energy of LTO cell
+  - intent: electrolyte_role
+    examples: |
+      - What is the role of electrolyte in a cell
+      - What is the use of electrolyte in  a cell
+      - How is electrolyte useful in a cell
+      - What purpose does electrolyte serve in a cell
+      - What is the purpose of using electrolyte in a cell
+  - intent: electrolyte_composition
+    examples: |
+      - What is electrolyte made of
+      - What is the composition of electrolyte
+      - What is electrolyte composed of
+  - intent: Li_salts_used
+    examples: |
+      - What lithium salts are used
+      - What are the lithium salts used in electrolyte
+      - Name the Li salts that are used in the electrolyte
+      - What Li salts are present in the electrolyte
+  - intent: Li_salts_dissolved_in
+    examples: |
+      - In what are the lithium salts dissolved
+      - In what solutions are these Li salts dissolved
+      - These Li salts are dissolved in which solutions
+  - intent: separator
+    examples: |
+      - What is a separator in a cell
+      - What do you mean by a separator
+      - Define separator used in a cell
+      - Explain the meaning of separator in a cell
+  - intent: separator_role
+    examples: |
+      - What is the role of the separator in a cell
+      - What purpose does a spearator serve in a cell
+      - Why is a separator present in a cell
+      - What is the purpose of separator in a cell
+      - What function does a separator perform in a cell
+  - intent: separator_allow_ions
+    examples: |
+      - Does separator allow ions to pass through it
+      - Are ions allowed to pass through a separator
+      - Can ions pass through a separator
+      - Does separator allow movement of ions through it
+  - intent: separator_composition
+    examples: |
+      - What is separator made of
+      - What is a seperator composed of
+      - What is the composition of a separator
+      - What is a separator made from
+      - What are the constituents of a separator
+  - intent: faults_in_LIB
+    examples: |
+      - What are the various faults that can happen in a battery
+      - What are the possible faults in a Li ion battery
+      - What faults can occur in a Li ion battery
+      - What are the different faults that can occur in a Li ion battery
+  - intent: fault_types
+    examples: |
+      - What is the classification of faults
+      - What are the different types of faults
+      - How are faults classified
+      - Explain the different types of fault
+  - intent: battery_abuse_types
+    examples: |
+      - What are the various abuses that a battery can undergo
+      - How can a battery be abused
+      - In what ways can a battery be abused
+      - What are the methods of misusing a battery
+      - How many ways can a battery be misused
+  - intent: SEI_layer_decompose
+    examples: |
+      - Can SEI layer decompose
+      - Is decomposition of SEI layer possible
+      - What is the possibility of decomposition of SEI layer
+      - Is there a chance that the SEI layer might decompose
+      - Can the SEI layer wear off
+  - intent: SEI_decomposition_reaction
+    examples: |
+      - What is the chemical reaction for SEI decomposition
+      - State the chemical reaction behind decomposition of SEI layer
+      - What is the  reaction involved in the decomposition of SEI layer
+      - How does the SEI decomposition chemical reaction takes place
+  - intent: separator_meltdown
+    examples: |
+      - Can the separator layer meltdown
+      - Is it possible for the separator layer to melt down
+      - Can the separator melt down
+  - intent: cathode_decompose
+    examples: |
+      - Can the cathode decompose
+      - Is decomposition of cathode possible
+      - What is the possibility of decomposition of cathode
+      - Is there a chance that the cathode might decompose
+      - Can the cathode wear off
+  - intent: LCO_cathode_decompose
+    examples: |
+      - At what temperature does LCO cathode decompose
+      - What is the temperature at which the LCO cathode decomposes
+      - When does LCO cathode decompose
+      - Around what temperature does the LCO cathode decompose
+  - intent: LMO_cathode_decompose
+    examples: |
+      - At what temperature does LMO cathode decompose
+      - What is the temperature at which the LMO cathode decomposes
+      - When does LMO cathode decompose
+      - Around what temperature does the LMO cathode decompose
+  - intent: NCM_cathode_decompose
+    examples: |
+      - At what temperature does NCM decompose
+      - At what temperature does NCM cathode decompose
+      - What is the temperature at which the NCM cathode decomposes
+      - When does NCM cathode decompose
+      - Around what temperature does the NCM cathode decompose
+  - intent: NCA_cathode_decompose
+    examples: |
+      - At what temperature does NCA decompose
+      - What is the temperature at which the NCA cathode decomposes
+      - When does NCA cathode decompose
+      - Around what temperature does the NCA cathode decompose
+  - intent: LFP_cathode_decompose
+    examples: |
+      - At what temperature does LFP decompose
+      - What is the temperature at which the LFP cathode decomposes
+      - When does LFP cathode decompose
+      - Around what temperature does the LFP cathode decompose
+  - intent: mechanical_abuse_types
+    examples: |
+      - What are the various types of mechanical abuse that the battery can experience
+      - Explain the different types of mechanical abuse
+      - How can a battery be mechanically abused
+      - What are the possible ways to mechanically abuse a battery
+      - In what ways can a a battery be mechanically abused
+  - intent: electrical_abuse
+    examples: |
+      - What are the various electrical abuse condition
+      - Explain the different types of electrical abuse
+      - How can a battery be electrical abused
+      - What are the possible ways to electrical abuse a battery
+      - In what ways can a a battery be electrical abused
+  - intent: ISC_full_form
+    examples: |
+      - What does ISC stand for
+      - What is the full form of ISC
+      - What do you mean by ISC
+      - What does ISC mean
+      - What is meant by ISC
+  - intent: ESC_full_form
+    examples: |
+      - Expand ESC
+      - What is the full form of ESC
+      - What do you mean by ESC
+      - What does ESC mean
+      - What is meant by ESC
+  - intent: overcharge_condition
+    examples: |
+      - What is overcharge condition
+      - How can a battery be overcharged
+      - What is the condition for overcharging a battery
+      - How can we overcharge a battery
+      - How can we say that a battery is overcharged
+  - intent: worst_electrical_abuse
+    examples: |
+      - Which is the worst electrical abuse condition
+      - What is the the worst possible manner in which a battery can be electrically abused
+  - intent: overcharge_cause
+    examples: |
+      - What can result in overcharge
+      - What is the cause of overcharge
+      - How can overcharge occur
+  - intent: overcharge_outcome
+    examples: |
+      - What happens in overcharge condition
+      - What happens when I overcharge a battery
+      - What is the effect of overcharging a battery
+      - What can we expect from an overcharged battery
+      - What is the result of an overcharged battery
+      - What is the outcome of an overcharged battery
+  - intent: over_lithiation_impact
+    examples: |
+      - What is the impact of over lithiation
+      - What are the other impacts of over lithiation on battery
+      - How can over lithiation impact the cell
+      - What is the effect of over lithiation
+  - intent: overcharge_impact_cathode
+    examples: |
+      - What is the impact of overcharge on cathode
+      - How can overcharging impact the cathode
+      - What is the effect of overcharging on cathode
+  - intent: overcharge_impact_electrolyte
+    examples: |
+      - What happens to the electrolyte during overcharge
+      - How can overcharging impact the electrolyte
+      - What is the effect of overcharging on electrolyte
+  - intent: high_temperature_impact_on_separator
+    examples: |
+      - How does the separator get impacted at high temperature
+      - How can high temperature impact the spearator
+      - What is the effect of high temperature on spearator
+  - intent: reason_for_impedance_increase_with_temperature
+    examples: |
+      - Why does the internal impedance of the battery increase with increase in temperature
+      - What is the reason behind increase of internal impedance with rise in cell temperature
+  - intent: overdischarge_meaning
+    examples: |
+      - What does overdischarge mean
+      - What is the meaning of overdischarge
+      - What do you mean by overdischarge
+      - Define overdischarge
+  - intent: overdischarge_cause
+    examples: |
+      - What are the causes of overdischarge
+      - How can a battery be overdischarged
+      - What can cause overdischarge of a battery
+      - What causes overdischarge
+      - What is the reason behind overdischarge of a cell
+  - intent: over_charge_or_discharge_hazardous
+    examples: |
+      - Which is more hazardous, overdischarge or overcharge
+      - Between overcharge and overdischarge, what is considered as more dangerous
+      - What is considered as more hazardous
+  - intent: overdischarge_outcome
+    examples: |
+      - What happens in overdischarge
+      - What happens when I overdischarge a battery
+      - What is the effect of overdischarging a battery
+      - What can we expect from an overdischarge battery
+      - What is the result of overdischarging a battery
+      - What is the outcome of overdischarging a battery
+  - intent: overdischarge_impact
+    examples: |
+      - What are the other impact of overdischarge
+      - How does overdischarge affect the battery
+      - How is overdischarge bad for the battery
+  - intent: ESC_meaning
+    examples: |
+      - What is external short circuit or ESC
+      - What do you mean by ESC
+      - How do you define ESC
+      - What is meant by ESC
+  - intent: ESC_causes
+    examples: |
+      - What are the causes of ESC
+      - What causes ESC
+      - How can ESC occur
+  - intent: ESC_impact
+    examples: |
+      - What is the impact of ESC on the battery
+      - How can ESC affect the battery
+      - In what ways can ESC affect the battery
+  - intent: ISC_cause
+    examples: |
+      - What causes internal short circuit or ISC
+      - What is the reason behind Internal Short circuit or ISC in a cell
+      - What are the causes of ISC
+  - intent: mech_abuse_cause_ISC
+    examples: |
+      - How does mechanical abuse cause ISC
+      - How is meachanical abuse responsible for causing ISC
+      - How can mechanical abuse cause Internal Short Circuit
+  - intent: elect_abuse_cause_ISC
+    examples: |
+      - How does electrical abuse cause ISC
+      - How is electrical abuse responsible for causing ISC
+      - How can electrical abuse cause Internal Short Circuit
+  - intent: therm_abuse_cause_ISC
+    examples: |
+      - How does thermal abuse cause ISC
+      - How is thermal abuse responsible for causing ISC
+      - How can thermal abuse cause Internal Short Circuit
+  - intent: separator_collapse
+    examples: |
+      - What happens when the separator shrinks or collapses
+      - How does collapsing of separator affect the cell
+      - How does separator damage affect the cell
+      - What happens when the separator is damaged
+  - intent: factors_affecting_battery_life
+    examples: |
+      - What determines the battery life
+      - How is battery life affected
+      - What factors affect the battery life
+      - Which facotrs are responsible for battery life
+      - List the factors affecting life of battery
+  - intent: battery_life_importance
+    examples: |
+      - What is the importance of battery life
+      - What role does life of battery plays
+      - How is battery life important
+      - Why is battery life an important parameter
+  - intent: longest_life
+    examples: |
+      - Which battery has longest life
+      - Which cell has the logest life expectancy
+      - Which cell gives the longest life
+  - intent: life_expectancy
+    examples: |
+      - What is battery life expectancy
+      - What do you mean by life cycle of battery
+      - Explain life expectancy of battery
+      - Define life expectancy of battery
+  - intent: battery_fading
+    examples: |
+      - What is battery aging or fading
+      - What is battery aging
+      - What is battery fading
+      - Define battery aging
+      - Define battery fading
+      - What do you mean by battery fading
+      - What do you mean by battery aging
+  - intent: capacity_loss
+    examples: |
+      - What is capacity loss?
+      - What do you mean by capacity loss
+      - How do you explain capacity loss
+      - Explain capacity loss
+      - Define capacity loss of cell
+      - Tell me about capacity loss of battery
+  - intent: fading_and_capacity_loss_same
+    examples: |
+      - Is battery fading & capacity loss same
+      - What is the difference between fading and capacity loss
+      - How do you differentiate capacity loss and fading
+      - State the difference between capacity loss and fading
+  - intent: capacity_loss_cause
+    examples: |
+      - What causes capacity loss in batteries
+      - What are the causes of capacity loss
+      - State the causes of capacity loss
+      - How does capacity loss happen
+      - What is the reason behind capcity loss
+      - What do you know about capacity loss
+  - intent: capacity_loss_temperature_dependence
+    examples: |
+      - How capacity loss is temperature-dependent
+      - Does capacity loss depend upon temperature
+      - Is capacity loss dependent on temperature
+      - Explain the dependency of capacity loss on temperature
+      - How does temperature affect capacity loss
+  - intent: capacity_loss_C_rate
+    examples: |
+      - How capacity loss is C-rate sensitive
+      - How capacity loss is C rate dependent
+      - Does capacity loss depend upon C rate
+      - Is capacity loss dependent on C rate
+      - Explain the dependency of capacity loss on C rate
+      - How does C rate affect capacity loss
+      - How does charging or discharging rate affect capacity loss
+      -
+  - intent: C_rate
+    examples: |
+      - What is C-rate
+      - What do you mean by C rate
+      - Explain C rate
+      - Define C rate
+      - How do you explain C rate
+      - Tell me about C rate
+  - intent: SoC
+    examples: |
+      - What is state of charge
+      - What do you mean by SoC
+      - Explain SoC
+      - Define SoC
+      - How do you explain SoC
+      - Tell me about SoC
+  - intent: DoD
+    examples: |
+      - What is depth of discharge
+      - What do you mean by DoD
+      - Explain DoD
+      - Define Depth of Discharge
+      - How do you explain DoD
+      - Tell me about DoD
+  - intent: car_battery_life
+    examples: |
+      - How long does a car battery last
+      - What is the life expectancy of car battery
+      - When do we need to change a car battery
+      - How often do we need to replace a car battery
+  - intent: battery_relacement_cost
+    examples: |
+      - What will be the cost of replacement of the battery
+      - What does it cost to replace a car battery
+      - How much does a new car battery cost
+      - How expensive is a car battery
+  - intent: charger_types
+    examples: |
+      - What are the various kinds of Chargers available for charging
+      - Name the different kinds of chargers available for charging
+      - List the different types of chargers available
+      - How many types of chargers are available in the market
+      - Tell me about the various types of chargers available
+  - intent: slow_charger
+    examples: |
+      - Can you elaborate on slow charge
+      - Tell me about slow chargers
+      - What is the behaviour of slow charger
+      - What do you mean by slow charger
+      - How long does a slow charger take to charge a battery
+  - intent: fast_charger_time_taken
+    examples: |
+      - How much time does a fast charger takes to charge a battery
+      - What is the time taken by fast charger to charge a battery
+      - In what time can a fast charger charge a battery
+      - How long does a fast charger take to fully charge a battery
+  - intent: coulombic_eff
+    examples: |
+      - What does Coulombic Efficiency mean
+      - What do you mean by Coulombic efficiency
+      - Explain coulombic efficicency
+      - Define coulombic efficiency
+      - Tell me about coulombic efficiency
+  - intent: highest_coulombic_eff
+    examples: |
+      - Which chemistry has the highest Coulombic Efficiency
+      - Name the chemistry having the highest coulombic efficiency
+      - Which chemistry exhibits the highest coulombic efficiency
+  - intent: 1C_rate
+    examples: |
+      - What does 1C rate signify
+      - What do you mean by 1C
+      - What is the meaning of 1C
+      - What do you mean by 1C charging rate
+      - What do you mean by 1C discharging rate
+  - intent: equalizing_charge
+    examples: |
+      - What is meant by equalizing charge
+      - What do you mean by equalizing charge
+      - Define equalizing charge
+      - What is equalizing charge
+  - intent: equalizing_charge_need
+    examples: |
+      - What is the need to Equalize the charge
+      - When do you need to eqaulize the charge
+      - When to equalize the charge
+      - When should we do charge equalization
+  - intent: equalizing_charge_condition
+    examples: |
+      - What are the required conditions to perform Charge Equalization
+      - State the conditions for equalizing charges
+      - What ar the conditions for charge equalization
+      - Mention the conditions for charge equalization
+  - intent: discharge_voltage_limits
+    examples: |
+      - What are different discharge voltage limits for cells
+      - Mention the different discharge voltage limits for cells
+      - What is the discharge voltage limits for cells
+  - intent: energy_spent
+    examples: |
+      - What amount of energy is spent at this voltage level
+      - How much energy is spent at the discharge voltage limit
+      - What is the energy spent at the discharge voltage limit
+  - intent: overcharge_lead_acid
+    examples: |
+      - What happens if I overcharge a lead-acid battery
+      - What if I overcharge a lead acid battery
+      - What can happen if we overcharge a lead acid battery
+      - What is the result of overcharging a lead acid battery
+      - How can overcharging affect a lead acid battery
+  - intent: priority_BMS
+    examples: |
+      - What is the highest priority of the BMS
+      - What is considered as highest priority by BMS
+      - What is the top priority of Battery Management System
+  - intent: intelligent_BMS_requirement
+    examples: |
+      - Why is the Intelligent BMS required
+      - What is the use of an intelligent BMS
+      - What can an intelligent BMS do
+      - How is an intelligent Battery Management System beneficial
+      - What is the advantage of an intelligent BMS
+  - intent: when_to_replace_battery
+    examples: |
+      - When should a battery be replaced
+      - When should we replace a battery
+      - After how many years should a battery be replaced
+      - How do we know when a battery needs replacement
+      - How do we know the expiry date of a battery
+      - When should a battery be discarded
+  - intent: when_to_measure_capacity
+    examples: |
+      - How often should the battery capacity measurement be done
+      - When should we measure the battery capapity
+      - At what intervals can we measure the capacity of a battery
+      - How do we know when to measure the capacity of a battery
+  - intent: digital_twin_li
+    examples: |
+      - What is digital twin model for lithium-ion batteries
+      - What do you mean by a digital twin
+      - Explain digial twin model for Lithium ion battery
+  - intent: digital_twin_requirement
+    examples: |
+      - Why is it crucial for the development of electric vehicle
+      - What is the necessity of digital twin
+      - What is the significance of digital twin for Lithium ion battery
+      - Why is digital twin model important for electric vehicle
+      - How does digital twin help in the development of EV
+  - intent: unusable_nicd_growth
+    examples: |
+      - What should be done if the unusable part of Nickel-Cadmium battery grows
+      -
+  - intent: battery_voltage_dependence
+    examples: |
+      - What does battery voltage depends on
+      -
+  - intent: li_types_form_factor
+    examples: |
+      - What are the different types of lithium by its form factor
+      -
+  - intent: li_technology_age
+    examples: |
+      - How old is the lithium ion technology
+      - When was the 1st lithium ion cell made
+      - When was the first li-cell introduced in the market
+      - What was the composition of the first lithium cell
+  - intent: first_li_battery_problem
+    examples: |
+      - What was the problem with the first Li-batteries
+      - What were the issues with the 1st Lithium batteries
+      - What were the drawbacks of the initial li-cells
+  - intent: first_li_cell_manufacturer
+    examples: |
+      - Who made the first rechargeable lithium-cell
+      - Which company made the 1st rechargeable Li-cell
+      - By whom was the first chargeable Li cell made
+      - Who developed the first rechargeable lithium battery
+      - In which year was the Li-cell made
+      - In which year was the first Li-cell sold
+  - intent: unique_feature_first_li_battery
+    examples: |
+      - What was the unique feature of the first Li cell
+      - What were the properties of first Li battery
+      - What are the properties of 1st rechargeable Li cell
+      - What are the properties of initial rechargeable battery
+      - What were the properties of early rechargeable cells
+  - intent: li_cell_requirement
+    examples: |
+      - What is the requirement of Li-cell
+      - What is the requirement of Li battery
+      - Why is Lithium battery important
+      - Why is Lithium battery necessary
+  - intent: standard_charge_li_procedure
+    examples: |
+      - What is the standard charging procedure for Li-cell/Li cell/Li battery/cell
+      - What is the standard procedure for recharging Li battery
+      - How is a Lithium cell recharged
+      - How can we charge a li-cell
+  - intent: CC_CV_charging
+    examples: |
+      - What is CC-CV recharging technique
+      - What do you mean by CCCV charging method
+      - What do we do in CC-CV charging
+      - How do we perform CCCV charging
+      - What is constant current constant voltage charging
+  - intent: battery_capacity
+    examples: |
+      - What is the capacity of a battery/cell
+      - What do you mean by capacity of a cell
+      - Define battery capacity
+      - Define capacity of a cell
+      - What is meant by cell capacity
+  - intent: energy_battery
+    examples: |
+      - What is energy of a battery
+      - What is energy of a cell
+      - What do you mean by battery energy
+      - Define energy of a battery
+      - Define cell energy
+  - intent: specific_energy
+    examples: |
+      - What is specific energy of a battery
+      - What is specific energy of a cell
+      - What do you mean by battery specific energy
+      - Define specific energy of a battery
+      - Define cell specific energy
+  - intent: energy_density
+    examples: |
+      - What is energy density of a battery
+      - What is energy density of a cell
+      - What do you mean by battery energy density
+      - Define energy density of a battery
+      - Define cell energy density
+  - intent: efficiency_meaning
+    examples: |
+      - What is efficiency of a battery
+      - What do you mean by efficiency of a cell
+      - Define battery efficicency
+      - How do you define cell efficiency
+      - Explain battery efficiency
+  - intent: efficiency_li_cell
+    examples: |
+      - How much is the efficiency of Li-cell/Li cell/Li battery
+      - What is the efficiency of Li-cell
+      - What is the efficiency of Li battery
+      - How much efficient is a Li cell
+  - intent: rated_capacity
+    examples: |
+      - What is rated capacity of a battery
+      - Define rated capacity of a battery
+      - How do you define the rated capacity of a battery
+      - What do you mean by rated capacity of a cell
+      - What is meant by rated capacity of a cell
+      - Define rated capacity of a cell
+  - intent: self_discharge
+    examples: |
+      - What is self discharge
+      - What do you mean by self discharge
+      - Explain self discharge
+      - How do you define self discharge
+      - What is meant by self discharge
+  - intent: trickle_charge
+    examples: |
+      - What is trickle charge
+      - How is trickle charge defined
+      - What is the definition of trickle charge
+      - Define trickle charging
+      - What do you mean by trickle charge
+  - intent: primary_battery
+    examples: |
+      - What are primary batteries
+      - What do you mean by primary battery
+      - Define primary battery
+      - What is meant by primary battery
+      - What do you understand by primary battery
+  - intent: secondary_battery
+    examples: |
+      - What are secondary batteries
+      - What do you mean by secondary battery
+      - Define secondary battery
+      - What do you understand by secondary battery
+      - What is meant by secondary battery
+      - How do you define secondary battery
+  - intent: li_form_factor
+    examples: |
+      - What is the form factor of lithium-ion cells/Li-ion cells/Li cells
+      - What is the form factor of li-ion cells
+      - What is the form factor of lithium cells
+      - What do you understand by the form factor of li-ion cells
+      - How do you define the form factor of li-ion cell
+  - intent: button_cell
+    examples: |
+      - What is a button cell
+      - What is a coin cell
+      - Define coin cell
+      - Define button cell
+      - What do you mean by coin cell
+      - What do you mean by button cell
+      - what is a coin cell
+  - intent: button_cell_drawbacks
+    examples: |
+      - What are the drawbacks coin cells
+      - What are the demerits of button cell
+      - What are the disadvantages of button cells
+      - What are the demerits of coin cell
+      - Explain the drawbacks of button cell
+      - Explain the demerits of coin cell
+  - intent: energy_storage
+    examples: |
+      - What is meant by energy storage
+      - What do you mean by energy storage
+      - Explain energy storage
+      - How do you explain energy storage
+  - intent: energy_storage_for_ev
+    examples: |
+      - What are the types of energy storages that have been proposed for EVs
+      - How many types of energy storage are there for EV
+      - Name the various energy storage methods for EV
+      - What are the various energy storage methods for electric vehicle
+      - How can energy be stored in EV
+  - intent: energy_storage_requirement_for_ev
+    examples: |
+      - What are requirements for energy storages applied in EV application
+      - Why do we need energy storage in EV
+      - What is the necessity of energy storage in EV
+      - Why do we require energy storage in EV
+      - Why is energy storage required in EV
+  - intent: electrochemical_battery
+    examples: |
+      - What is electrochemical battery
+      - What do you mean by an electrochemical battery
+      - What do you understand by electrochemical battery
+      - Explain electrochemical battery
+      - What is meant by electrochemical battery
+  - intent: coulometric_capacity
+    examples: |
+      - What is coulometric capacity
+      - What do you mean by coulometric capacity
+      - Explain coulometric capacity
+      - What do you understand by coulometric capacity
+      - How do you define coulometric capcity
+  - intent: capacity_large_discharge_rate
+    examples: |
+      - What will be the capacity of a battery with a large discharge current rate
+      - How will high discharge current rate affect the battery capacity
+      - What will be the variation in capacity of battery with respect to high discharge current
+      - If I discharge the battery at a high rate, how would it affect the battery capacity
+      - What will be the affect of high discharge current rate on battery capacity
+      - If the battery is discharged at a high C rate what will be its impact on battery capacity
+  - intent: thermodynamic_voltage
+    examples: |
+      - what is the thermodynamics voltage
+      - What do you mean by thermodynamic voltage
+      - What is meant by thermodynamic voltage
+      - Define thermodynamic voltage
+      - Explain thermodynamic voltage
+      - How do you define thermodynamic voltage
+  - intent: cell_battery_difference
+    examples: |
+      - What is the difference between cell and battery
+      - What differentiates a battery from a cell
+      - Explain the difference between a cell and a battery
+      - Differentiate between cell and battery
+      - State the difference between a cell and a battery
+  - intent: cell_capacity_actual
+    examples: |
+      - What is actual capacity of a cell
+      - Define the actual capacity of a cell
+      - What do you mean by actual capacity of a cell
+      - How do you explain actual capacity of a cell
+  - intent: cell_capacity_effective
+    examples: |
+      - What is effective cell capacity
+      - Define the effective capacity of a cell
+      - What do you mean by effective capacity of a cell
+      - How do you explain effective capacity of a cell
+  - intent: amount_li_present
+    examples: |
+      - How much lithium is present in a cell
+      - What is the amount of lithium present in a cell
+      - What is the content of lithium in a cell
+      - What is the lithium content of a cell
+  - intent: weak_cell
+    examples: |
+      - What is a weak cell
+      - What do you mean by weak cell
+      - Define weak cell
+      - Which cell is termed as weak cell
+      - Explain weak cell
+  - intent: coulombic_eff_variation
+    examples: |
+      - How does coulombic efficiency of a cell change
+      - What impacts the coulombic efficiency of a cell
+      - What factors impact coulombic efficiency
+      - How do you vary the coulombic efficiency of a cell
+      - How can one change the coulobic efficiency of a cell
+  - intent: age_impact
+    examples: |
+      - What is the impact of age on a cell's coulombic efficiency
+      - How does the coulombic efficiency change with age of the cell
+      - Explain the effect of aging on the coulombic efficiency of the cell
+      - Explain how the coulombic efficiency of a cell change with its age
+      - What is the effect of cell's age on its coulombic efficiency
+  - intent: nominal_DC_resistance
+    examples: |
+      - What is nominal DC resistance of a cell
+      - What is the definition of nominal DC resistance of a cell
+      - What do you mean by nominal DC resistance of a cell
+      - Explain the meaning of nominal DC resistance
+      - Define nominal DC resistance of a cell
+      - What is emant by nominal DC resistance of a cell
+  - intent: li_cell_constituents
+    examples: |
+      - What are the constituents of a Li-cell/Li-battery
+      - What are the constituents of a Li-battery
+      - What is the composition of Li-cell
+      - What is the composition of battery
+      - What makes a Li-cell
+      - What makes a Li-battery
+      - What are the constituents of Li cell
+  - intent: specific_capacity_anode_li
+    examples: |
+      - How much is the specific capacity of anodes used in batteries
+      - State the specific capacity of anodes used in li cells
+      - What is the specific capacity of the anode used in li cell
+  - intent: specific_capacity_anode_li_maximum
+    examples: |
+      - What is the theoretical highest specific capacity of anodes in Li-cells
+      - How much is the highest specific capacity of anodes used in li batteries
+      - State the highest specific capacity of anodes used in li cells
+  - intent: challenges_high_capacity_anode
+    examples: |
+      - What are the challenges of high capacity anodes
+      - Explain the challenges faced in high capacity anodes
+      - State the challenges of using high capacity anodes
+      - What is the difficulty of using high capacity anodes
+  - intent: specific_capacity_limitation_anode
+    examples: |
+      - Why is the specific capacity limited to 372mAh/g (372mAhg-1) for anode
+      - Why is the specific capacity of anode limited
+      - What is the reason for limitation of specific capcity of anode
+      -
+  - intent: reason_li_cells_life_cycles
+    examples: |
+      - Why do Li-cells have long life cycles
+      - What is the reason behind long life of lithium cells
+      - Explain why lithium cells have long life cycle
+      - State the reason for long life cycle of li cells
+  - intent: cell_to_battery
+    examples: |
+      - How are cells connected to make a battery pack
+      - How can cells be configured to form a battery
+      - How can we connect cells to form a battery pack
+      - What are the different ways in which cells can be connected to form a battery
+  - intent: parallel_cell_module
+    examples: |
+      - What is a parallel cell module (PCM)
+      - Explain parallel cell module
+      - What do you mean by Parallel Cell Module
+      - What is meant by PCM
+  - intent: series_cell_module
+    examples: |
+      - What is a series cell module (SCM)
+      - Explain series cell module
+      - What do you mean by series Cell Module
+      - What is meant by SCM
+  - intent: parallel_module_drawbacks
+    examples: |
+      - What are the drawbacks of parallel cell modules
+      - What are the trade-offs of parallel cell modules
+      - What are the disadvantages of parallel cell modules
+      - What are the pros and cons of PCM
+  - intent: series_module_drawbacks
+    examples: |
+      - What are the drawbacks of series cell modules
+      - What are the trade-offs of series cell modules
+      - What are the disadvantages of series cell modules
+      - What are the pros and cons of SCM
+  - intent: parameter_variation_battery_pack
+    examples: |
+      - How do the parameters of a cell vary in a battery pack
+      - How does the internal resistance of the cells in a battery pack vary
+      - How does the capacity of individual cells vary in a battery pack
+      - Explain the variation of parameters of a cell
+      - How does cell parameter vary in a battery pack
+  - intent: parameter_variation_battery_pack_old_cell
+    examples: |
+      - How do the parameters of old cells vary in a battery pack
+      - How does the internal resistance of the old cells in a battery pack vary
+      - How does the capacity of individual cells vary in an old battery pack
+      - Explain the variation of parameters of an old cell
+  - intent: cell_connection_notation
+    examples: |
+      - What is the cell connection notation used
+      - Elaborate the cell connection notation
+      - What cell connection notation is used
+  - intent: series_first_connection
+    examples: |
+      - How can one denote series first connection
+      - How do we represent series 1st connection
+      - What notation is used for series first connection
+      - What notation is used for series 1st connection
+  - intent: detect_cell_imbalance
+    examples: |
+      - How can cell imbalance be detected
+      - How can we detect cell imbalance
+      - Is there a way to detect cell imbalance
+      - Suggest a method to detect imbalance in cell
+      - Suggest methods to detect cell imbalance
+  - intent: detect_cell_imbalance_challenge
+    examples: |
+      - What are the challenges in detecting cell imbalance
+      - What are the difficulties faced in detecting cell imbalance
+      - What problems are faced to detect cell impbalance
+      - Why can't we detect cell imbalance easily
+      - Why is it tough to detect cell imbalance
+  - intent: electrolyte_characteristics
+    examples: |
+      - What are the required characteristics of electrolytes
+      - State the required characteristics of electrolyte
+      - State the properties of an electrolyte
+      - What are the ideal requirements for an electrolyte
+      - What are the ideal properties that an electrolyte should possess
+  - intent: electrolyte_stability
+    examples: |
+      - What is the meaning of electrochemical stability of electrolytes
+      - What do you mean by stability of electrolyte
+      - Explain electrolyte stability
+      - How are electrolytes electrochemically stable
+  - intent: achieving_electrolyte_stability
+    examples: |
+      - How is the electrochemical stability achieved
+      - What ensures electrochemical stability of electrolytes
+      - How can we have a stable electrolyte
+      - How to ensure stability of electrolyte
+      - What can be done to make the electrolyte stable
+  - intent: cost_of_electrolyte
+    examples: |
+      - What is the typical cost of electrolyte in a battery pack
+      - How much does an electrolyte cost
+      - What is the estimated cost of electrolyte
+      - What is the price of an electrolyte
+  - intent: common_li_electrolyte
+    examples: |
+      - What is the most common electrolyte used in Li-batteries
+      - Which is the most common electrolyte for li battery
+      - Which electrolyte is generally preferred for li cells
+      - Name the most common electrolyte used in Li cells
+  - intent: electrolyte_conductivity
+    examples: |
+      - What is the conductivity of electrolytes
+      - Explain electrolyte conductivity
+      - What do you mean by electrolyte conductivity
+      - What is the meaning of electrolyte conductivity
+      - What is electrolyte conductivity
+  - intent: LiPF6_oxidation_potential
+    examples: |
+      - What is the oxidation potential of LiPF6 electrolyte
+      - State the oxidation potential of LiPF6 electrolyte
+      - How much is the oxidation potential of LiPF6 electrolyte
+      - Quantify the oxidation potential of LiPF6 electrolyte
+  - intent: LiPF6_electrolyte_decomposition_temperature
+    examples: |
+      - At what temperature does the LiPF6 electrolyte decomposes
+      - What is the decomposition temperature of LiPF6
+      - What is the temperature required to decompose LiPF6 electrolyte
+      - How much temperature is required to decompose LiPF6 electrolyte
+  - intent: LiPF6_reaction_water
+    examples: |
+      - Does LiPF6 electrolyte react with water
+      - Does water and LiPF6 react
+      - Is there any reaction between LiPF6 and water
+      - Can LiPF6 react with water
+  - intent: define_electrolyte
+    examples: |
+      - What is the definition of electrolytes
+      - Define electrolyte
+      - What do you mean by electrolyte
+      - Explain electrolyte
+      - What is meant by electrolyte
+  - intent: electrolyte_influence_battery
+    examples: |
+      - How does the electrolyte influence a battery
+      - What is the influence of electrolyte on the battery
+      - Does electrolyte influence the battery
+      - Can electrolyte influence battery
+  - intent: different_li_chemistry
+    examples: |
+      - What are the different types of Li ion battery chemistries
+      - Explain the different types of lithium chemistry
+      - Name the different lithium chemistries
+      - How many different types of lithium chemistries are present
+  - intent: best_chemistry
+    examples: |
+      - Which has the best chemistry of all
+      - Name the best battery chemistry
+      - What is the best battery chemistry available
+      - Which chemistry is the best for battery
+  - intent: reason_for_low_capacity
+    examples: |
+      - What is the reason for low capacity in some battery chemistries
+      - Explain the reason for low capacity in some battery chemistry
+      - Why do we have low capacity for some battery chemistry
+      - How is battery chemistry responsible for its low capacity
+  - intent: reason_for_low_specific_power
+    examples: |
+      - What about the reason for low specific power
+      - What is the reason for low specific power in some battery chemistries
+      - Explain the reason for low specific power in some battery chemistry
+      - Why do we have low specific power for some battery chemistry
+      - How is battery chemistry responsible for its low specific power
+  - intent: more_longevity
+    examples: |
+      - Which battery chemistry has more longevity
+      - Which battery chemistry offer longer life
+      - State the chemistry which gives longer life
+      - Which battery chemistry provides long battery life
+  - intent: popular_chemistry_mobile
+    examples: |
+      - Which chemistry is the popular choice in the mobiles and laptops
+      - Name the chemistry which is used in mobiles
+      - Which chemistry is populary used in laptops
+      - Which chemistry is commonly used in mobile phones
+      - Which chemistry is mostly used for laptops
+  - intent: anode
+    examples: |
+      - Define anode
+      - What is an anode
+      - Explain anode
+      - What do you mean by anode
+      - What do you understand by anode
+      - How do you define anode
+  - intent: cathode
+    examples: |
+      - Define cathode
+      - What is an cathode
+      - Explain cathode
+      - What do you mean by cathode
+      - What do you understand by cathode
+      - How do you define cathode
+  - intent: li_cathode_material
+    examples: |
+      - Which material is used as cathode in lithium-ion batteries
+      - Name the material used as cathode in lithium batteries
+      - What is the commonly used material for cathode in lithium battery
+      - What can be used as cathode for lithium battery
+  - intent: li_anode_material
+    examples: |
+      - Which material is used as anode in lithium-ion batteries
+      - Name the material used as anode in lithium batteries
+      - What is the commonly used material for anode in lithium battery
+      - What can be used as anode for lithium battery
+  - intent: li_electrolyte_material
+    examples: |
+      - What is used as electrolyte in lithium-ion batteries
+      - Which material is used as electrolyte in lithium-ion batteries
+      - Name the material used as electrolyte in lithium batteries
+      - What is the commonly used material for electrolyte in lithium battery
+      - What can be used as electrolyte for lithium battery
+  - intent: lead_acid_cathode_material
+    examples: |
+      - Which material is used as cathode in lead acid batteries
+      - Name the material used as cathode in lead acid batteries
+      - What is the commonly used material for cathode in lead acid battery
+      - What can be used as cathode for lead acid battery
+  - intent: lead_acid_anode_material
+    examples: |
+      - Which material is used as anode in lead acid batteries
+      - Name the material used as anode in lead acid batteries
+      - What is the commonly used material for anode in lead acid battery
+      - What can be used as anode for lead acid battery
+  - intent: lead_acid_electrolyte_material
+    examples: |
+      - What is used as electrolyte in lead acid batteries
+      - Which material is used as electrolyte in lead acid batteries
+      - Name the material used as electrolyte in lead acid batteries
+      - What is the commonly used material for electrolyte in lead acid battery
+      - What can be used as electrolyte for lead acid battery
+  - intent: alkaline_battery_cathode_material
+    examples: |
+      - Which material is used as cathode in primary alkaline batteries
+      - Name the material which is used as cathode in primary alkaline batteries
+      - What is the commonly used material for cathode in primary alkaline batteries
+      - What can be used as cathode for primary alkaline batteries
+  - intent: alkaline_battery_anode_material
+    examples: |
+      - Which material is used as anode in primary alkaline batteries
+      - Name the material which is used as anode in primary alkaline batteries
+      - What is the commonly used material for anode in primary alkaline batteries
+      - What can be used as anode for primary alkaline batteries
+  - intent: alkaline_battery_electrolyte_material
+    examples: |
+      - What is used as electrolyte in primary alkaline batteries
+      - Which material is used as electrolyte in primary alkaline batteries
+      - Name the material which is used as electrolyte in primary alkaline batteries
+      - What is the commonly used material for electrolyte in primary alkaline batteries
+      - What can be used as electrolyte for primary alkaline batteries
+  - intent: li_voltage_at_full_charge
+    examples: |
+      - What is the expected voltage of a Li-ion battery when it reaches 100 percent charge
+      - What is the full charge voltage of lithium cell
+      - State the full charge voltage of li ion cell
+      - Full charge voltage of li ion cell
+  - intent: at_full_charge
+    examples: |
+      - What happens when the battery has fully charged
+      - How does a fully charged battery behave
+  - intent: temperature_rise_during_charging
+    examples: |
+      - How much can the temperature rise during charging a Li-ion battery
+      - What is the increase in lithium cell temperature during charging
+      - How much temperature change occur for lithium cell while charging
+      - What is the temperature difference obtained for a lithium cell while charging
+  - intent: temperature_rise_during_charging_reason
+    examples: |
+      - Why does the temperature rise when charging a battery
+      - Reason behind increase in temperature of cell during charging
+      - Why does the cell temperature change during cahrging
+      - What is the reason behind increase in temperature of cell during charging
+  - intent: temperature_rise_above_5_degree
+    examples: |
+      - What to do if the temperature rises above 5 degree C
+      - What should be done if the rise in temperature is above 5 degree C
+      - What can be done if the temperature rises above five degrees
+      - How to tackle a temperature rise of more than 5 degrees
+  - intent: capacity_change_using_different_charger
+    examples: |
+      - Why has my battery capacity decreased after I changed my charger
+      - How does changing the charger affect the capacity of battery
+      - Why does the capacity of battery change when we use different chargers
+      - How does charger affect the capacity of battery
+      - How does battery capacity change when we use different chargers
+  - intent: lead_acid_application
+    examples: |
+      - In what applications lead acid batteries are used
+      - Where is lead acid battery used
+      - Where do we use lead acid battery
+      - What is the application of lead acid battery
+      - In which areas lead acid battery is used
+      - Why do we use lead acid battery
+  - intent: li_advantage
+    examples: |
+      - What are the advantages of Li-ion batteries over the lead and nickel-based batteries
+      - What advantages do lithium batteries give over nicke based battery
+      - How are lithium battery better than nickel based battery
+      - Why are lithium battery superior than nickel battery
+  - intent: need_full_discharge
+    examples: |
+      - Does NiCd and NiMH need full discharge
+      - Do NiCd battery need full discharge
+      - Do NiMH battery need full discharge
+      - Does nickel battery need full discharge
+      - Do we need to fully discharge nickel battery
+  - intent: memory_effect
+    examples: |
+      - What is memory effect in Nickel cadmium batteries
+      - Explain memory effect in nickel cadmium battery
+      - What do you mean by memory effect
+      - What is meant by memory effect in nickel cadmium battery
+  - intent: prevent_sulfation
+    examples: |
+      - How to prevent sulfation in lead acid batteries
+      - How do you prevent sulfation in lead acid battery
+      - What are the ways to prevent sulfation in lead acid battery
+      - How can we prevent sulfation in lead acid battery
+      - Explain ways to prevent sulfation in lead acid battery
+      - What can be done to prevent sulfation in lead acid battery
+  - intent: sulfation
+    examples: |
+      - What is sulfation
+      - What do you mean by sulfation
+      - What is meant by sulfation
+      - Explain sulfation
+      - Define sulfation

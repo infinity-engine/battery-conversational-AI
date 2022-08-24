@@ -1,30 +1,916 @@
 version: "3.1"
 
 stories:
+  - story: chatbot inventor
+    steps:
+      - intent: chatbot_inventor
+      - action: utter_chatbot_inventor
+  - story: about chatbot
+    steps:
+      - intent: about_chatbot
+      - action: utter_iamabot
+      - intent: chatbot_inventor
+      - action: utter_chatbot_inventor
+  - story: ask_query
+    steps:
+      - intent: user_query
+      - action: utter_default
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  - story: batt type
+    steps:
+      - intent: batt_type
+      - action: utter_batt_type
+      - intent: define_batt_type
+      - action: utter_define_batt_type
+  - story: batt chem
+    steps:
+      - intent: batt_chem
+      - action: utter_batt_chem
+      - intent: common_chem
+      - action: utter_common_chem
+  - story: batt characteristics
+    steps:
+      - intent: ideal_char
+      - action: utter_ideal_char
+  - story: batt components
+    steps:
+      - intent: batt_components
+      - action: utter_batt_components
+      - intent: define_batt_components
+      - action: utter_define_batt_components
+  - story: thermal_management
+    steps:
+      - intent: thermal_management
+      - action: utter_thermal_management
+      - intent: thermal_management
+      - action: utter_thermal_management_importance
+      - intent: batt_at_high_temperature
+      - action: utter_batt_at_high_temperature
+  - story: thermal runaway
+    steps:
+      - intent: thermal_runaway
+      - action: utter_thermal_runaway
+      - intent: thermal_runaway_trigger
+      - action: utter_thermal_runaway_trigger
+      - intent: thermal_runaway_danger
+      - action: utter_thermal_runaway_danger
+      - intent: thermal_runaway_damage
+      - action: utter_thermal_runaway_damage
+  - story: low temperature impact
+    steps:
+      - intent: low_temperature_impact
+      - action: utter_low_temperature_impact
+      - intent: lithium_dendrites
+      - action: utter_lithium_dendrites
+      - intent: lithium_dendrites_formation
+      - action: utter_lithium_dendrites_formation
+      - intent: lithium_dendrites_impact
+      - action: utter_lithium_dendrites_impact
+      - intent: capacity_fade_dendrite
+      - action: utter_capacity_fade_dendrite
+      - intent: lithium_dendrite_formation_factors
+      - action: utter_lithium_dendrite_formation_factors
+  - story: anode and negative electrode
+    steps:
+      - intent: anode_negative_electrode_difference
+      - action: utter_anode_negative_electrode_difference
+      - intent: li_negative_electrode
+      - action: utter_li_negative_electrode
+      - intent: li_positive_electrode
+      - action: utter_li_positive_electrode
+      - intent: positive_electrode_types
+      - action: utter_positive_electrode_types
+  - story: primary source of heat
+    steps:
+      - intent: heat_source_li
+      - action: utter_heat_source_li
+  - story: polarization reaction
+    steps:
+      - intent: polarization_reaction
+      - action: utter_polarization_reaction
+  - story: safe operating limit
+    steps:
+      - intent: battery_operating_limit
+      - action: utter_battery_operating_limit
+      - intent: li_operating_temp
+      - action: utter_li_operating_temp
+  - story: impact of low temperature
+    steps:
+      - intent: low_temp_impact
+      - action: utter_low_temp_impact
+      - intent: electrochemical_rk_low_temperature
+      - action: utter_electrochemical_rk_low_temperature
+      - intent: li_ion_diffusion_rate_impact_battery_capacity
+      - action: utter_li_ion_diffusion_rate_impact_battery_capacity
+      - intent: low_temp_charging
+      - action: utter_low_temp_charging
+  - story: impact of high temperature
+    steps:
+      - intent: high_temperature_impact
+      - action: utter_high_temperature_impact
+      - intent: internal_temperature_rise
+      - action: utter_internal_temperature_rise
+      - intent: gas_released_internal_temperature_rise
+      - action: utter_gas_released_internal_temperature_rise
+      - intent: high_temperature_impact_capacity_loss
+      - action: utter_high_temperature_impact_capacity_loss
+  - story: maintaining internal temperature
+    steps:
+      - intent: maintain_internal_temperature
+      - action: utter_maintain_internal_temperature
+      - intent: heating_technique
+      - action: utter_heating_technique
+      - intent: cooling_technique
+      - action: utter_cooling_technique
+      - intent: common_cooling_technique
+      - action: utter_common_cooling_technique
+  - story: Phase Change Material
+    steps:
+      - intent: PCM_full_form
+      - action: utter_PCM_full_form
+      - intent: PCM_working
+      - action: utter_PCM_working
+      - intent: PCM_types
+      - action: utter_PCM_types
+      - intent: best_PCM
+      - action: utter_best_PCM
+      - intent: PCM_quality_factors
+      - action: utter_PCM_quality_factors
+      - intent: PCM_safety
+      - action: utter_PCM_safety
+  - story: natural convection tradeoff
+    steps:
+      - intent: tradeoff_natural_convection
+      - action: utter_tradeoff_natural_convection
+  - story: air cooling tradeoff
+    steps:
+      - intent: tradeoff_air_cooling
+      - action: utter_tradeoff_air_cooling
+  - story: forced cooling tradeoff
+    steps:
+      - intent: tradeoff_forced_convection
+      - action: utter_tradeoff_forced_convection
+  - story: liquid cooling
+    steps:
+      - intent: liquid_cooling
+      - action: utter_liquid_cooling
+  - story: liquid or air cooling
+    steps:
+      - intent: liquid_cool_or_air_cool
+      - action: utter_liquid_cool_or_air_cool
+      - intent: liquid_cooling_methods
+      - action: utter_liquid_cooling_methods
+      - intent: direct_liquid_cooling
+      - action: utter_direct_liquid_cooling
+      - intent: direct_liquid_cooling_in_auto
+      - action: utter_direct_liquid_cooling_in_auto
+      - intent: indirect_cooling_methods
+      - action: utter_indirect_cooling_methods
+      - intent: direct_indirect_cooling_eff
+      - action: utter_direct_indirect_cooling_eff
+      - intent: why_indirect_cooling_low_eff
+      - action: utter_why_indirect_cooling_low_eff
+      - intent: common_liquids_for_cooling
+      - action: utter_common_liquids_for_cooling
+  - story: refrigerant for battery
+    steps:
+      - intent: can_battery_refrigerant_used
+      - action: utter_can_battery_refrigerant_used
+  - story: DRC
+    steps:
+      - intent: DRC
+      - action: utter_DRC
+  - story: LIB full form
+    steps:
+      - intent: LIB_full_form
+      - action: utter_LIB_full_form
+  - story: ESS full form
+    steps:
+      - intent: ESS_full_form
+      - action: utter_ESS_full_form
+  - story: fault in battery
+    steps:
+      - intent: causes_of_fault
+      - action: utter_causes_of_fault
+  - story: cathode materials
+    steps:
+      - intent: cathode_materials
+      - action: utter_cathode_materials
+  - story: layered oxides
+    steps:
+      - intent: layered_oxides
+      - action: utter_layered_oxides
+      - intent: tradeoff_layered_oxides
+      - action: utter_tradeoff_layered_oxides
+      - intent: different_layered_oxide_cathodes
+      - action: utter_different_layered_oxide_cathodes
+  - story: cathodee used for EV battery
+    steps:
+      - intent: cathode_in_EV_battery
+      - action: utter_cathode_in_EV_battery
+      - intent: NCM_cathode_composition
+      - action: utter_NCM_cathode_composition
+      - intent: tradeoff_nickel_cobalt_manganese
+      - action: utter_tradeoff_nickel_cobalt_manganese
+      - intent: pros_cons_manganese
+      - action: utter_pros_cons_manganese
+      - intent: pros_cons_nickel
+      - action: utter_pros_cons_nickel
+      - intent: ratio_NiCoMn_commercial_cathodes
+      - action: utter_ratio_NiCoMn_commercial_cathodes
+  - story: spinel oxide cathode
+    steps:
+      - intent: spinel_oxide_cathode_examples
+      - action: utter_spinel_oxide_cathode_examples
+  - story: polyanion oxide cathode
+    steps:
+      - intent: polyanion_oxide_cathode_examples
+      - action: utter_polyanion_oxide_cathode_examples
+  - story: common anode material
+    steps:
+      - intent: common_anode_material
+      - action: utter_common_anode_material
+      - intent: carbonaceous_anode_types
+      - action: utter_carbonaceous_anode_types
+  - story: SEI layer
+    steps:
+      - intent: SEI_layer
+      - action: utter_SEI_layer
+      - intent: SEI_layer_thickness
+      - action: utter_SEI_layer_thickness
+      - intent: SEI_composition
+      - action: utter_SEI_composition
+      - intent: SEI_characteristics
+      - action: utter_SEI_characteristics
+  - story: LCO battery
+    steps:
+      - intent: LCO_full_form
+      - action: utter_LCO_full_form
+      - intent: LCO_chemical_formula
+      - action: utter_LCO_chemical_formula
+      - intent: LCO_anode_or_cathode
+      - action: utter_LCO_anode_or_cathode
+      - intent: LCO_cell_voltage
+      - action: utter_LCO_cell_voltage
+      - intent: LCO_battery_energy_density
+      - action: utter_LCO_battery_energy_density
+      - intent: LCO_battery_life_cycle
+      - action: utter_LCO_battery_life_cycle
+  - story: LMO battery
+    steps:
+      - intent: LMO_full_form
+      - action: utter_LMO_full_form
+      - intent: LMO_chemical_formula
+      - action: utter_LMO_chemical_formula
+      - intent: LMO_cell_voltage
+      - action: utter_LMO_cell_voltage
+      - intent: LMO_energy_density
+      - action: utter_LMO_energy_density
+      - intent: LMO_battery_life_cycle
+      - action: utter_LMO_battery_life_cycle
+  - story: NCM battery
+    steps:
+      - intent: NCM_full_form
+      - action: utter_NCM_full_form
+      - intent: NCM_chemical_composition
+      - action: utter_NCM_chemical_composition
+      - intent: clarify_NCM_battery_voltage
+      - action: utter_clarify_NCM_battery_voltage
+      - intent: NCM_battery_voltage
+      - action: utter_NCM_battery_voltage
+      - intent: NCM_cell_voltage
+      - action: utter_NCM_cell_voltage
+      - intent: NCM_energy_density
+      - action: utter_NCM_energy_density
+      - intent: NCM_life_cycle
+      - action: utter_NCM_life_cycle
+  - story: LFP battery
+    steps:
+      - intent: LFP_full_form
+      - action: utter_LFP_full_form
+      - intent: LFP_chemical_composition
+      - action: utter_LFP_chemical_composition
+      - intent: LFP_cell_voltage
+      - action: utter_LFP_cell_voltage
+      - intent: LFP_energy_density
+      - action: utter_LFP_energy_density
+      - intent: LFP_life_cycle
+      - action: utter_LFP_life_cycle
+  - story: LTO battery
+    steps:
+      - intent: LTO_full_form
+      - action: utter_LTO_full_form
+      - intent: is_LTO_anode
+      - action: utter_is_LTO_anode
+      - intent: LTO_chemical_formula
+      - action: utter_LTO_chemical_formula
+      - intent: cathode_LTO_anode
+      - action: utter_cathode_LTO_anode
+      - intent: LCO_cathode_with_LTO_anode
+      - action: utter_LCO_cathode_with_LTO_anode
+      - intent: LTO_cell_voltage
+      - action: utter_LTO_cell_voltage
+      - intent: LTO_life_cycle
+      - action: utter_LTO_life_cycle
+      - intent: LTO_specific_energy
+      - action: utter_LTO_specific_energy
+  - story: electrolyte
+    steps:
+      - intent: electrolyte_role
+      - action: utter_electrolyte_role
+      - intent: cost_of_electrolyte
+      - action: utter_cost_of_electrolyte
+      - intent: electrolyte_composition
+      - action: utter_electrolyte_composition
+      - intent: Li_salts_used
+      - action: utter_Li_salts_used
+      - intent: Li_salts_dissolved_in
+      - action: utter_Li_salts_dissolved_in
+  - story: separator
+    steps:
+      - intent: separator
+      - action: utter_separator
+      - intent: separator_role
+      - action: utter_separator_role
+      - intent: separator_allow_ions
+      - action: utter_separator_allow_ions
+      - intent: separator_composition
+      - action: utter_separator_composition
+  - story: fault in LIB
+    steps:
+      - intent: faults_in_LIB
+      - action: utter_faults_in_LIB
+      - intent: fault_types
+      - action: utter_fault_types
+  - story: battery abuse
+    steps:
+      - intent: battery_abuse_types
+      - action: utter_battery_abuse_types
+  - story: SEI layer decompose
+    steps:
+      - intent: SEI_layer_decompose
+      - action: utter_SEI_layer_decompose
+      - intent: SEI_decomposition_reaction
+      - action: utter_SEI_decomposition_reaction
+  - story: separator meltdown
+    steps:
+      - intent: separator_meltdown
+      - action: utter_separator_meltdown
+      - intent: cathode_decompose
+      - action: utter_cathode_decompose
+      - intent: LCO_cathode_decompose
+      - action: utter_LCO_cathode_decompose
+      - intent: LMO_cathode_decompose
+      - action: utter_LMO_cathode_decompose
+      - intent: NCM_cathode_decompose
+      - action: utter_NCM_cathode_decompose
+      - intent: NCA_cathode_decompose
+      - action: utter_NCA_cathode_decompose
+      - intent: LFP_cathode_decompose
+      - action: utter_LFP_cathode_decompose
+  - story: mechanical abuse
+    steps:
+      - intent: mechanical_abuse_types
+      - action: utter_mechanical_abuse_types
+      - intent: electrical_abuse
+      - action: utter_electrical_abuse
+  - story: ISC
+    steps:
+      - intent: ISC_full_form
+      - action: utter_ISC_full_form
+      - intent: ISC_cause
+      - action: utter_ISC_cause
+      - intent: mech_abuse_cause_ISC
+      - action: utter_mech_abuse_cause_ISC
+      - intent: therm_abuse_cause_ISC
+      - action: utter_therm_abuse_cause_ISC
+      - intent: separator_collapse
+      - action: utter_separator_collapse
+  - story: ESC
+    steps:
+      - intent: ESC_full_form
+      - action: utter_ESC_full_form
+      - intent: ESC_meaning
+      - action: utter_ESC_meaning
+      - intent: ESC_causes
+      - action: utter_ESC_causes
+      - intent: ESC_impact
+      - action: utter_ESC_impact
+  - story: overcharge condition
+    steps:
+      - intent: overcharge_condition
+      - action: utter_overcharge_condition
+  - story: worst electrical abuse
+    steps:
+      - intent: worst_electrical_abuse
+      - action: utter_worst_electrical_abuse
+      - intent: overcharge_cause
+      - action: utter_overcharge_cause
+      - intent: overcharge_outcome
+      - action: utter_overcharge_outcome
+      - intent: over_lithiation_impact
+      - action: utter_over_lithiation_impact
+  - story: overcharge impact
+    steps:
+      - intent: overcharge_impact_cathode
+      - action: utter_overcharge_impact_cathode
+      - intent: overcharge_impact_electrolyte
+      - action: utter_overcharge_impact_electrolyte
+      - intent: high_temperature_impact_on_separator
+      - action: utter_high_temperature_impact_on_separator
+  - story: Internal impedance increase
+    steps:
+      - intent: reason_for_impedance_increase_with_temperature
+      - action: utter_reason_for_impedance_increase_with_temperature
+  - story: overdischarge
+    steps:
+      - intent: overdischarge_meaning
+      - action: utter_overdischarge_meaning
+      - intent: overdischarge_cause
+      - action: utter_overdischarge_cause
+      - intent: over_charge_or_discharge_hazardous
+      - action: utter_over_charge_or_discharge_hazardous
+      - intent: overdischarge_outcome
+      - action: utter_overdischarge_outcome
+      - intent: overdischarge_impact
+      - action: utter_overdischarge_impact
+  - story: factors affecting battery life
+    steps:
+      - intent: factors_affecting_battery_life
+      - action: utter_factors_affecting_battery_life
+      - intent: battery_life_importance
+      - action: utter_battery_life_importance
+      - intent: longest_life
+      - action: utter_longest_life
+      - intent: life_expectancy
+      - action: utter_life_expectancy
+  - story: Battery fading or aging
+    steps:
+      - intent: battery_fading
+      - action: utter_battery_fading
+      - intent: capacity_loss
+      - action: utter_capacity_loss
+      - intent: fading_and_capacity_loss_same
+      - action: utter_fading_and_capacity_loss_same
+  - story: capacity loss of battery
+    steps:
+      - intent: capacity_loss_cause
+      - action: utter_capacity_loss_cause
+      - intent: capacity_loss_temperature_dependence
+      - action: utter_capacity_loss_temperature_dependence
+      - intent: capacity_loss_C_rate
+      - action: utter_capacity_loss_C_rate
+  - story: C Rate
+    steps:
+      - intent: C_rate
+      - action: utter_C_rate
+  - story: SoC
+    steps:
+      - intent: SoC
+      - action: utter_SoC
+  - story: DoD
+    steps:
+      - intent: DoD
+      - action: utter_DoD
+  - story: car battery life
+    steps:
+      - intent: car_battery_life
+      - action: utter_car_battery_life
+      - intent: battery_relacement_cost
+      - action: utter_battery_relacement_cost
+  - story: charger
+    steps:
+      - intent: charger_types
+      - action: utter_charger_types
+      - intent: slow_charger
+      - action: utter_slow_charger
+      - intent: fast_charger_time_taken
+      - action: utter_fast_charger_time_taken
+      - intent: rapid_charger_time_taken
+      - action: utter_rapid_charger_time_taken
+  - story: Coulombic Efficiency
+    steps:
+      - intent: coulombic_eff
+      - action: utter_coulombic_eff
+      - intent: highest_coulombic_eff
+      - action: utter_highest_coulombic_eff
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: 1C rate meaning
+    steps:
+      - intent: C_rate
+      - action: utter_C_rate
+      - intent: 1C_rate
+      - action: utter_1C_rate
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: Equalizing Charge
+    steps:
+      - intent: equalizing_charge
+      - action: utter_equalizing_charge
+      - intent: equalizing_charge_need
+      - action: utter_equalizing_charge_need
+      - intent: equalizing_charge_condition
+      - action: utter_equalizing_charge_condition
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: discharge voltage limits
+    steps:
+      - intent: discharge_voltage_limits
+      - action: utter_discharge_voltage_limits
+      - intent: energy_spent
+      - action: utter_energy_spent
+
+  - story: overcharging lead acid
+    steps:
+      - intent: overcharge_lead_acid
+      - action: utter_overcharge_lead_acid
+
+  - story: priority of BMS
+    steps:
+      - intent: priority_BMS
+      - action: utter_priority_BMS
+      - intent: intelligent_BMS_requirement
+      - action: utter_intelligent_BMS_requirement
+
+  - story: battery replacement
+    steps:
+      - intent: when_to_replace_battery
+      - action: utter_when_to_replace_battery
+      - intent: when_to_measure_capacity
+      - action: utter_when_to_measure_capacity
+
+  - story: digital twin
+    steps:
+      - intent: digital_twin_li
+      - action: utter_digital_twin_li
+      - intent: digital_twin_requirement
+      - action: utter_digital_twin_requirement
+
+  - story: unusable growth in NiCd
+    steps:
+      - intent: unusable_nicd_growth
+      - action: utter_unusable_nicd_growth
+
+  - story: voltage dependence
+    steps:
+      - intent: battery_voltage_dependence
+      - action: utter_battery_voltage_dependence
+
+  - story: Lithium types form factor
+    steps:
+      - intent: li_types_form_factor
+      - action: utter_li_types_form_factor
+
+  - story: Lithium history
+    steps:
+      - intent: li_technology_age
+      - action: utter_li_technology_age
+      - intent: first_li_battery_problem
+      - action: utter_first_li_battery_problem
+      - intent: unique_feature_first_li_battery
+      - action: utter_unique_feature_first_li_battery
+
+  - story: li cell requirement
+    steps:
+      - intent: li_cell_requirement
+      - action: utter_li_cell_requirement
+
+  - story: charging protocol
+    steps:
+      - intent: standard_charge_li_procedure
+      - action: utter_standard_charge_li_procedure
+      - intent: CC_CV_charging
+      - action: utter_CC_CV_charging
+
+  - story: capacity
+    steps:
+      - intent: battery_capacity
+      - action: utter_battery_capacity
+
+  - story: energy
+    steps:
+      - intent: energy_battery
+      - action: utter_energy_battery
+
+  - story: specific energy
+    steps:
+      - intent: specific_energy
+      - action: utter_specific_energy
+
+  - story: energy density
+    steps:
+      - intent: energy_density
+      - action: utter_energy_density
+
+  - story: efficiency
+    steps:
+      - intent: efficiency_meaning
+      - action: utter_efficiency_meaning
+      - intent: efficiency_li_cell
+      - action: utter_efficiency_li_cell
+
+  - story: rated capacity
+    steps:
+      - intent: rated_capacity
+      - action: utter_rated_capacity
+
+  - story: self discharge and trickle charge
+    steps:
+      - intent: self_discharge
+      - action: utter_self_discharge
+      - intent: trickle_charge
+      - action: utter_trickle_charge
+
+  - story: primary and secondary battery
+    steps:
+      - intent: primary_battery
+      - action: utter_primary_battery
+      - intent: secondary_battery
+      - action: utter_secondary_battery
+
+  - story: li form factor
+    steps:
+      - intent: li_form_factor
+      - action: utter_li_form_factor
+
+  - story: button cell
+    steps:
+      - intent: button_cell
+      - action: utter_button_cell
+      - intent: button_cell_drawbacks
+      - action: utter_button_cell_drawbacks
+
+  - story: energy storage
+    steps:
+      - intent: energy_storage
+      - action: utter_energy_storage
+      - intent: energy_storage_for_ev
+      - action: utter_energy_storage_for_ev
+      - intent: energy_storage_requirement_for_ev
+      - action: utter_energy_storage_requirement_for_ev
+
+  - story: electrochemical battery
+    steps:
+      - intent: electrochemical_battery
+      - action: utter_electrochemical_battery
+
+  - story: coulometric capacity
+    steps:
+      - intent: coulometric_capacity
+      - action: utter_coulometric_capacity
+
+  - story: large discharge rate & capacity
+    steps:
+      - intent: capacity_large_discharge_rate
+      - action: utter_capacity_large_discharge_rate
+
+  - story: thermodynamic voltage
+    steps:
+      - intent: thermodynamic_voltage
+      - action: utter_thermodynamic_voltage
+
+  - story: cell and battery difference
+    steps:
+      - intent: cell_battery_difference
+      - action: utter_cell_battery_difference
+
+  - story: actual cell capacity
+    steps:
+      - intent: cell_capacity_actual
+      - action: utter_cell_capacity_actual
+
+  - story: effective cell capacity
+    steps:
+      - intent: cell_capacity_effective
+      - action: utter_cell_capacity_effective
+
+  - story: li amount
+    steps:
+      - intent: amount_li_present
+      - action: utter_amount_li_present
+
+  - story: weak cell
+    steps:
+      - intent: weak_cell
+      - action: utter_weak_cell
+
+  - story: coulombic efficiency variation
+    steps:
+      - intent: coulombic_eff_variation
+      - action: utter_coulombic_eff_variation
+      - intent: age_impact
+      - action: utter_age_impact
+
+  - story: nominal dc resistance
+    steps:
+      - intent: nominal_DC_resistance
+      - action: utter_nominal_DC_resistance
+
+  - story: limitations
+    steps:
+      - intent: li_cell_constituents
+      - action: utter_li_cell_constituents
+      - intent: specific_capacity_anode_li
+      - action: utter_specific_capacity_anode_li
+      - intent: specific_capacity_anode_li_maximum
+      - action: utter_specific_capacity_anode_li_maximum
+      - intent: challenges_high_capacity_anode
+      - action: utter_challenges_high_capacity_anode
+      - intent: specific_capacity_limitation_anode
+      - action: utter_specific_capacity_limitation_anode
+
+  - story: life cycle li cell
+    steps:
+      - intent: reason_li_cells_life_cycles
+      - action: utter_reason_li_cells_life_cycles
+
+  - story: cell to battery connection
+    steps:
+      - intent: cell_to_battery
+      - action: utter_cell_to_battery
+      - intent: parallel_cell_module
+      - action: utter_parallel_cell_module
+      - intent: parallel_module_drawbacks
+      - action: utter_parallel_module_drawbacks
+      - intent: series_cell_module
+      - action: utter_series_cell_module
+      - intent: series_module_drawbacks
+      - action: utter_series_module_drawbacks
+
+  - story: parameter variation
+    steps:
+      - intent: parameter_variation_battery_pack
+      - action: utter_parameter_variation_battery_pack
+      - intent: parameter_variation_battery_pack_old_cell
+      - action: utter_parameter_variation_battery_pack_old_cell
+
+  - story: cell connection
+    steps:
+      - intent: cell_connection_notation
+      - action: utter_cell_connection_notation
+      - intent: series_first_connection
+      - action: utter_series_first_connection
+
+  - story: imbalance
+    steps:
+      - intent: detect_cell_imbalance
+      - action: utter_detect_cell_imbalance
+      - intent: detect_cell_imbalance_challenge
+      - action: utter_detect_cell_imbalance_challenge
+
+  - story: electrolyte character
+    steps:
+      - intent: electrolyte_characteristics
+      - action: utter_electrolyte_characteristics
+      - intent: electrolyte_stability
+      - action: utter_electrolyte_stability
+      - intent: achieving_electrolyte_stability
+      - action: utter_achieving_electrolyte_stability
+      - intent: cost_of_electrolyte
+      - action: utter_cost_of_electrolyte
+
+  - story: About LiPF6
+    steps:
+      - intent: common_li_electrolyte
+      - action: utter_common_li_electrolyte
+      - intent: electrolyte_conductivity
+      - action: utter_electrolyte_conductivity
+      - intent: LiPF6_oxidation_potential
+      - action: utter_LiPF6_oxidation_potential
+      - intent: LiPF6_electrolyte_decomposition_temperature
+      - action: utter_LiPF6_electrolyte_decomposition_temperature
+      - intent: LiPF6_reaction_water
+      - action: utter_LiPF6_reaction_water
+
+  - story: electrolyte definition
+    steps:
+      - intent: define_electrolyte
+      - action: utter_define_electrolyte
+      - intent: electrolyte_influence_battery
+      - action: utter_electrolyte_influence_battery
+      - intent: li_electrolyte_material
+      - action: utter_li_electrolyte_material
+
+  - story: Li chemistries
+    steps:
+      - intent: different_li_chemistry
+      - action: utter_different_li_chemistry
+      - intent: best_chemistry
+      - action: utter_best_chemistry
+
+  - story: Reason for low capacity
+    steps:
+      - intent: reason_for_low_capacity
+      - action: utter_reason_for_low_capacity
+
+  - story: Reason for low specific capacity
+    steps:
+      - intent: reason_for_low_specific_power
+      - action: utter_reason_for_low_specific_power
+
+  - story: Life span of battery
+    steps:
+      - intent: more_longevity
+      - action: utter_more_longevity
+
+  - story: popular chemistry for mobile battery
+    steps:
+      - intent: popular_chemistry_mobile
+      - action: utter_popular_chemistry_mobile
+
+  - story: anode
+    steps:
+      - intent: anode
+      - action: utter_anode
+
+  - story: cathode
+    steps:
+      - intent: cathode
+      - action: utter_cathode
+
+  - story: cathode for Pb-acid battery
+    steps:
+      - intent: lead_acid_cathode_material
+      - action: utter_lead_acid_cathode_material
+      - intent: lead_acid_anode_material
+      - action: utter_lead_acid_anode_material
+      - intent: lead_acid_electrolyte_material
+      - action: utter_lead_acid_electrolyte_material
+
+  - story: materials for li-ion
+    steps:
+      - intent: li_anode_material
+      - action: utter_li_anode_material
+      - intent: li_cathode_material
+      - action: utter_li_cathode_material
+
+  - story: materials for alkaline battery
+    steps:
+      - intent: alkaline_battery_cathode_material
+      - action: utter_alkaline_battery_cathode_material
+      - intent: alkaline_battery_anode_material
+      - action: utter_alkaline_battery_anode_material
+      - intent: alkaline_battery_electrolyte_material
+      - action: utter_alkaline_battery_electrolyte_material
+
+  - story: full charge li voltage
+    steps:
+      - intent: li_voltage_at_full_charge
+      - action: utter_li_voltage_at_full_charge
+      - intent: at_full_charge
+      - action: utter_at_full_charge
+
+  - story: Temperature rise during charging
+    steps:
+      - intent: temperature_rise_during_charging
+      - action: utter_temperature_rise_during_charging
+      - intent: temperature_rise_during_charging_reason
+      - action: utter_temperature_rise_during_charging_reason
+      - intent: temperature_rise_above_5_degree
+      - action: utter_temperature_rise_above_5_degree
+
+  - story: variation in battery capacity with charger
+    steps:
+      - intent: capacity_change_using_different_charger
+      - action: utter_capacity_change_using_different_charger
+
+  - story: lead acid application
+    steps:
+      - intent: lead_acid_application
+      - action: utter_lead_acid_application
+
+  - story: Li ion advantage
+    steps:
+      - intent: li_advantage
+      - action: utter_li_advantage
+
+  - story: Need for full discharge
+    steps:
+      - intent: need_full_discharge
+      - action: utter_need_full_discharge
+      - intent: memory_effect
+      - action: utter_memory_effect
+
+  - story: prevent sulfation
+    steps:
+      - intent: sulfation
+      - action: utter_sulfation
+      - intent: prevent_sulfation
+      - action: utter_prevent_sulfation
+
+  - story: Battery definition
+    steps:
+      - intent: battery_definition
+      - action: utter_battery_definition

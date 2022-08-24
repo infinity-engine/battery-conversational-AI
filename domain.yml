@@ -1,33 +1,941 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+   - 1C_rate
+   - about_chatbot
+   - achieving_electrolyte_stability
+   - affirm
+   - age_impact
+   - alkaline_battery_anode_material
+   - alkaline_battery_cathode_material
+   - alkaline_battery_electrolyte_material
+   - amount_li_present
+   - anode
+   - anode_negative_electrode_difference
+   - at_full_charge
+   - batt_at_high_temperature
+   - batt_chem
+   - batt_components
+   - batt_type
+   - battery_abuse_types
+   - battery_capacity
+   - battery_definition
+   - battery_fading
+   - battery_life_importance
+   - battery_operating_limit
+   - battery_relacement_cost
+   - battery_voltage_dependence
+   - best_chemistry
+   - best_PCM
+   - bot_challenge
+   - button_cell
+   - button_cell_drawbacks
+   - C_rate
+   - can_battery_refrigerant_used
+   - capacity_change_using_different_charger
+   - capacity_fade_dendrite
+   - capacity_large_discharge_rate
+   - capacity_loss
+   - capacity_loss_C_rate
+   - capacity_loss_cause
+   - capacity_loss_temperature_dependence
+   - car_battery_life
+   - carbonaceous_anode_types
+   - cathode
+   - cathode_decompose
+   - cathode_in_EV_battery
+   - cathode_LTO_anode
+   - cathode_materials
+   - causes_of_fault
+   - CC_CV_charging
+   - cell_battery_difference
+   - cell_capacity_actual
+   - cell_capacity_effective
+   - cell_connection_notation
+   - cell_to_battery
+   - challenges_high_capacity_anode
+   - charger_types
+   - chatbot_inventor
+   - clarify_NCM_battery_voltage
+   - common_anode_material
+   - common_chem
+   - common_cooling_technique
+   - common_li_electrolyte
+   - common_liquids_for_cooling
+   - cooling_technique
+   - cost_of_electrolyte
+   - coulombic_eff
+   - coulombic_eff_variation
+   - coulometric_capacity
+   - current_impact_on_battery_capacity
+   - define_batt_components
+   - define_batt_type
+   - define_electrolyte
+   - deny
+   - detect_cell_imbalance
+   - detect_cell_imbalance_challenge
+   - different_layered_oxide_cathodes
+   - different_li_chemistry
+   - digital_twin_li
+   - digital_twin_requirement
+   - direct_indirect_cooling_eff
+   - direct_liquid_cooling
+   - direct_liquid_cooling_in_auto
+   - discharge_voltage_limits
+   - DoD
+   - DRC
+   - efficiency_li_cell
+   - efficiency_meaning
+   - elect_abuse_cause_ISC
+   - electrical_abuse
+   - electrochemical_battery
+   - electrochemical_rk_low_temperature
+   - electrolyte_characteristics
+   - electrolyte_composition
+   - electrolyte_conductivity
+   - electrolyte_influence_battery
+   - electrolyte_role
+   - electrolyte_stability
+   - energy_battery
+   - energy_density
+   - energy_spent
+   - energy_storage
+   - energy_storage_for_ev
+   - energy_storage_requirement_for_ev
+   - equalizing_charge
+   - equalizing_charge_condition
+   - equalizing_charge_need
+   - ESC_causes
+   - ESC_full_form
+   - ESC_impact
+   - ESC_meaning
+   - ESS_full_form
+   - factors_affecting_battery_life
+   - fading_and_capacity_loss_same
+   - fast_charger_time_taken
+   - fault_types
+   - faults_in_LIB
+   - first_li_battery_problem
+   - first_li_cell_manufacturer
+   - gas_released_internal_temperature_rise
+   - goodbye
+   - greet
+   - heat_source_li
+   - heating_technique
+   - high_temperature_impact
+   - high_temperature_impact_capacity_loss
+   - high_temperature_impact_on_separator
+   - highest_coulombic_eff
+   - ideal_char
+   - indirect_cooling_methods
+   - intelligent_BMS_requirement
+   - internal_temperature_rise
+   - invention_time
+   - inventor_name
+   - is_LTO_anode
+   - ISC_cause
+   - ISC_full_form
+   - layered_oxides
+   - LCO_anode_or_cathode
+   - LCO_battery_energy_density
+   - LCO_battery_life_cycle
+   - LCO_cathode_decompose
+   - LCO_cathode_with_LTO_anode
+   - LCO_cell_voltage
+   - LCO_chemical_formula
+   - LCO_full_form
+   - lead_acid_anode_material
+   - lead_acid_application
+   - lead_acid_cathode_material
+   - lead_acid_electrolyte_material
+   - LFP_cathode_decompose
+   - LFP_cell_voltage
+   - LFP_chemical_composition
+   - LFP_energy_density
+   - LFP_full_form
+   - LFP_life_cycle
+   - li_advantage
+   - li_anode_material
+   - li_cathode_material
+   - li_cell_constituents
+   - li_cell_requirement
+   - li_electrolyte_material
+   - li_form_factor
+   - li_ion_diffusion_rate_impact_battery_capacity
+   - li_negative_electrode
+   - li_operating_temp
+   - li_positive_electrode
+   - Li_salts_dissolved_in
+   - Li_salts_used
+   - li_technology_age
+   - li_types_form_factor
+   - li_voltage_at_full_charge
+   - LIB_full_form
+   - life_expectancy
+   - LiPF6_electrolyte_decomposition_temperature
+   - LiPF6_oxidation_potential
+   - LiPF6_reaction_water
+   - liquid_cool_or_air_cool
+   - liquid_cooling
+   - liquid_cooling_methods
+   - lithium_dendrite_formation_factors
+   - lithium_dendrites
+   - lithium_dendrites_formation
+   - lithium_dendrites_impact
+   - LMO_battery_life_cycle
+   - LMO_cathode_decompose
+   - LMO_cell_voltage
+   - LMO_chemical_formula
+   - LMO_energy_density
+   - LMO_full_form
+   - longest_life
+   - low_temp_charging
+   - low_temp_impact
+   - low_temperature_impact
+   - LTO_cell_voltage
+   - LTO_chemical_formula
+   - LTO_full_form
+   - LTO_life_cycle
+   - LTO_specific_energy
+   - maintain_internal_temperature
+   - mech_abuse_cause_ISC
+   - mechanical_abuse_types
+   - memory_effect
+   - mood_great
+   - mood_unhappy
+   - more_longevity
+   - NCA_cathode_decompose
+   - NCM_battery_voltage
+   - NCM_cathode_composition
+   - NCM_cathode_decompose
+   - NCM_cell_voltage
+   - NCM_chemical_composition
+   - NCM_energy_density
+   - NCM_full_form
+   - NCM_life_cycle
+   - need_full_discharge
+   - nlu_fallback
+   - nominal_DC_resistance
+   - over_charge_or_discharge_hazardous
+   - over_lithiation_impact
+   - overcharge_cause
+   - overcharge_condition
+   - overcharge_impact_cathode
+   - overcharge_impact_electrolyte
+   - overcharge_lead_acid
+   - overcharge_outcome
+   - overdischarge_cause
+   - overdischarge_impact
+   - overdischarge_meaning
+   - overdischarge_outcome
+   - parallel_cell_module
+   - parallel_module_drawbacks
+   - parameter_variation_battery_pack
+   - parameter_variation_battery_pack_old_cell
+   - PCM_full_form
+   - PCM_quality_factors
+   - PCM_safety
+   - PCM_types
+   - PCM_working
+   - polarization_reaction
+   - polyanion_oxide_cathode_examples
+   - popular_chemistry_mobile
+   - positive_electrode_types
+   - prevent_sulfation
+   - primary_battery
+   - priority_BMS
+   - pros_cons_manganese
+   - pros_cons_nickel
+   - rapid_charger_time_taken
+   - rated_capacity
+   - ratio_NiCoMn_commercial_cathodes
+   - reason_for_impedance_increase_with_temperature
+   - reason_for_low_capacity
+   - reason_for_low_specific_power
+   - reason_li_cells_life_cycles
+   - secondary_battery
+   - SEI_characteristics
+   - SEI_composition
+   - SEI_decomposition_reaction
+   - SEI_layer
+   - SEI_layer_decompose
+   - SEI_layer_thickness
+   - self_discharge
+   - separator
+   - separator_allow_ions
+   - separator_collapse
+   - separator_composition
+   - separator_meltdown
+   - separator_role
+   - series_cell_module
+   - series_first_connection
+   - series_module_drawbacks
+   - slow_charger
+   - SoC
+   - specific_capacity_anode_li
+   - specific_capacity_anode_li_maximum
+   - specific_capacity_limitation_anode
+   - specific_energy
+   - spinel_oxide_cathode_examples
+   - standard_charge_li_procedure
+   - sulfation
+   - temperature_rise_above_5_degree
+   - temperature_rise_during_charging
+   - temperature_rise_during_charging_reason
+   - therm_abuse_cause_ISC
+   - thermal_management
+   - thermal_management_importance
+   - thermal_runaway
+   - thermal_runaway_cause
+   - thermal_runaway_damage
+   - thermal_runaway_danger
+   - thermal_runaway_trigger
+   - thermodynamic_voltage
+   - tradeoff_air_cooling
+   - tradeoff_forced_convection
+   - tradeoff_layered_oxides
+   - tradeoff_natural_convection
+   - tradeoff_nickel_cobalt_manganese
+   - trickle_charge
+   - unique_feature_first_li_battery
+   - unusable_nicd_growth
+   - user_query
+   - weak_cell
+   - when_to_measure_capacity
+   - when_to_replace_battery
+   - why_indirect_cooling_low_eff
+   - worst_electrical_abuse
+
+entities:
+- question
+
+slots:
+  question:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: question
 
 responses:
+  utter_battery_definition:
+  - text: |
+      Battery is a collection of one or more cells whose chemical reactions create a flow of electrons in a circuit. 
+      All batteries are made up of three basic components: 
+        an anode (the '-' side), 
+        a cathode (the '+' side) and 
+        some kind of electrolyte (a substance that chemically reacts with the anode and cathode)
+  utter_chatbot_inventor:
+  - text: I was invented by a dedicated team of E-Mobility Lab, IIT Guwahati.
+  utter_batt_type:
+  - text: 'There are three types of cells : Cylindrical, Pouch and Prismatic cells'
+  utter_define_batt_type:
+  - text: Hey! How are you?
+  utter_batt_chem:
+  - text: The different battery chemistries available are Li-ion, NiCd, NiMH, Lead Acid, etc.
+  utter_common_chem:
+  - text: Presently, Lithium ion is the most common battery chemistry available in the market.
+  utter_ideal_char:
+  - text: Ideally, battery should have high energy density, high power density, low self discharge, low internal resistance, high temperature tolerance, etc.
+  utter_batt_components:
+  - text: The major components of a battery are the electrodes, separator and electrolyte
+  utter_define_batt_components:
+  - text: Anode is the negative terminal, cathode is the positive terminal and electrolyte is a medium which allows ions to flow between the electordes. The separator keeps the electrodes separated but allows transfer of ions between them
+  utter_invention_time:
+  - text: Battery was invented by Alessandro Volta in 1800
+  utter_inventor_name:
+  - text: Battery was invented by Alessandro Volta in 1800
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: I am Lisa, a Conversational AI to answer you anything related to battery.
+  utter_thermal_management:
+  - text: The temperature management inside the battery is called thermal management. Its function is to equalize and keep the temperature of the battery cells within a reasonable range.
+  utter_how_thermal_management:
+  - text: Thermal management can be done by enforcing cooling on high temperature batteries and heating batteries in low temperature conditions.
+  utter_thermal_management_importance:
+  - text: Both the higher and lower temperature environments will seriously affect the battery capacity and the service life.
+  utter_batt_at_high_temperature:
+  - text: At a high temperature environment, lithium-ion batteries may produce thermal runaway, resulting in short circuits, combustion, explosion and other safety problems.
+  utter_thermal_runaway:
+  - text: Thermal runaway is a chain reaction within a battery cell that can be very difficult to stop once it has started.
+  utter_thermal_runaway_trigger:
+  - text: It occurs when the temperature inside a battery reaches the point that causes a chemical reaction to occur inside the battery. This chemical reaction produces even more heat, which drives the temperature higher, causing further chemical reactions that create more heat.
+  utter_thermal_runaway_danger:
+  - text: In thermal runaway, the battery cell temperature rises incredibly fast, usually in milliseconds. The energy stored in that battery is released very suddenly. This chain reaction creates extremely high temperatures of around 752 degrees Fahrenheit or 400 degrees Celsius. These temperatures can cause gassing of the battery and a fire that is so hot it can be nearly impossible to extinguish.
+  utter_thermal_runaway_damage:
+  - text: In extreme cases, thermal runaway can cause batteries to explode and start fires. In minor cases, it can cause batteries to melt or be damaged beyond repair.
+  utter_thermal_runaway_cause:
+  - text: Thermal runaway can occur due to an internal short circuit caused by physical damage or poor battery maintenance. The same type of scenario could cause an external short circuit which could also kick off the chain reaction. Also, Overcharging a battery beyond its safe max voltage can permanently damage it and lead to thermal runaway.
+  utter_low_temperature_impact:
+  - text: Lithium dendrites may appear in lithium-ion batteries at low temperature, causing short circuits, failure to start and other operational faults.
+  utter_lithium_dendrites:
+  - text: Lithium dendrites are metallic microstructures that form on the negative electrode during the charging process.
+  utter_lithium_dendrites_formation:
+  - text: Lithium dendrites are formed when extra lithium ions accumulate on the anode surface and cannot be absorbed into the anode in time.
+  utter_lithium_dendrites_impact:
+  - text: They can cause short circuits and lead to catastrophic failures and even fires. In addition, capacity fade is another potential hazard of lithium dendrite growth.
+  utter_anode_negative_electrode_difference:
+  - text: Anode and negative electrodes are one and the same
+  utter_capacity_fade_dendrite:
+  - text: The lithium dendrite reacts with the electrolyte, causing it to decompose and triggering the loss of active lithium inside the battery. The capacity loss is an accumulating effect along with the gradual lithium dendrite growth.
+  utter_lithium_dendrite_formation_factors:
+  - text: Lithium dendrite growth is influenced by multiple parameters, including current density, temperature, electrolyte, and electrolyte convection.
+  utter_li_negative_electrode:
+  - text: Carbon is used to make the negative electrode.
+  utter_li_positive_electrode:
+  - text: Lithium-containing compounds are used to make the positive electrode.
+  utter_positive_electrode_types:
+  - text: The chemical composition of some of the positive electrodes is LiFePO4, LiMn2O4 and Li(NiCoMn)O2.
+  utter_heat_source_li:
+  - text: 'There are four primary sources of heat inside a battery: the reaction heat from a reversible reaction; the by-reaction heat generated by electrolyte decomposition during overcharging or over-discharge; joule heat due to the internal resistance of the cell; and the heat of polarization caused by the polarization reaction.'
+  utter_polarization_reaction:
+  - text: In electrochemistry, polarization is a collective term for certain mechanical side-effects (of an electrochemical process) by which isolating barriers develop at the interface between electrode and electrolyte.
+  utter_current_impact_on_battery_capacity:
+  - text: The larger the discharge current of the battery, the smaller the discharge capacity and the faster the voltage drop. When the charging current increases, the charging speed increases, and the more heat a battery generates.
+  utter_battery_operating_limit:
+  - text: The common operating temperature of LIBs is usually between 15 °C and 40 °C.
+  utter_low_temp_impact:
+  - text: The performance of LIBs can be problematic at low temperatures (e.g., <15 °C). The charging and discharging performance will be affected because the electrochemical reaction cannot be carried out normally.
+  utter_electrochemical_rk_low_temperature:
+  - text: When the temperature is too low, the diffusion rate of lithium-ions in the electrolyte decreases seriously due to the increase of electrolyte viscosity, resulting in a significant rise in the internal resistance.
+  utter_li_ion_diffusion_rate_impact_battery_capacity:
+  - text: The number of lithium-ions participating in the reaction decreases, directly affecting the electricity storage and release, leading to the attenuation of battery capacity and power characteristics.
+  utter_low_temp_charging:
+  - text: For the charging of LIBs at low temperature, lithium dendrites may pierce the film, forming an internal short circuit and threatening the safety of use
+  utter_high_temperature_impact:
+  - text: 'LIB pack is composed of many single LIBs in series or in parallel, so the heat generated by the electrochemical reaction of the battery itself cannot be released in time due to the high environment temperature when the battery pack undergoes charging or discharging.'
+  utter_internal_temperature_rise:
+  - text: A single battery cell may be overheated, resulting in the combustion, explosion, or escape of toxic gases. Moreover, the short circuit may occur at high temperatures due to the LIB pack's complicated internal power circuit structure.
+  utter_gas_released_internal_temperature_rise:
+  - text: Gases which can be released as a result of internal temperature rise are CO, C2H4, H2S, HF.
+  utter_high_temperature_impact_capacity_loss:
+  - text: High temperatures also affect the capacity of LIBs. Studies have shown that LIBs lose nearly 70 % of their capacity after 500 cycles of discharging at 55 °C.
+  utter_maintain_internal_temperature:
+  - text: In cold regions, the battery's internal temperature is maintained by heating. In hot regions, the temperature is maintained by cooling.
+  utter_heating_technique:
+  - text: 'The heating methods for LIBs can be divided into the following categories: electric heating, air heating, liquid heating, PCM heating, and other heating methods such as the Peltier effect and heat pipe.'
+  utter_cooling_technique:
+  - text: Different methods exist, including air cooling, liquid cooling and PCM cooling technologies.
+  utter_common_cooling_technique:
+  - text: Air cooling is the most widely used heat dissipation method for battery packs by directly using the wind around the moving car to conduct natural convection or generate forced airflow through the fan operation.
+  utter_PCM_full_form:
+  - text: PCM stand for Phase Change Material
+  utter_PCM_working:
+  - text: Phase change material (PCM) are substances that absorb and release thermal energy during the process of melting and solidifying. When a PCM melts, it absorbs a large amount of heat (energy) from the environment. Conversely, when a PCM solidifies it releases a large amount of energy in the form of latent heat.
+  utter_PCM_types:
+  - text: Natural convection has the apparent advantages of simplicity and low cost, while it also has the disadvantage of weak heat dissipation capacity due to uncontrollable wind.
+  utter_best_PCM:
+  - text: The most cost-effective PCM for energy storage is the Paraffin wax.
+  utter_PCM_quality_factors:
+  - text: There are several factors that need to be considered when selecting a phase change material. An ideal PCM will have high heat of fusion, high thermal conductivity, high specific heat and density, long term reliability during repeated cycling, and dependable freezing behaviour.
+  utter_PCM_safety:
+  - text: All PCMs are Non-Toxic and Non-Hazardous. Therefore, PCM are safe
+  utter_tradeoff_natural_convection:
+  - text: Natural convection has the apparent advantages of simplicity and low cost, while it also has the disadvantage of weak heat dissipation capacity due to uncontrollable wind.
+  utter_tradeoff_air_cooling:
+  - text: Natural convection has the apparent advantages of simplicity and low cost, while it also has the disadvantage of weak heat dissipation capacity due to uncontrollable wind.
+  utter_tradeoff_forced_convection:
+  - text: The forced convection by the fan is more reliable and easier to maintain than natural convection, therefore becoming a more common battery cooling method. However, a common problem for forced convection is the temperature non-uniformity within the cell.
+  utter_liquid_cooling:
+  - text: Liquid cooling system has four parts, condenser, evaporator, compressor and liquid coolant. The liquid coolant flows through the battery pack, extracts the heat, and maintains temperature.
+  utter_liquid_cool_or_air_cool:
+  - text: Compared with air cooling, liquid cooling is more efficient due to the higher heat transfer coefficient of water.
+  utter_liquid_cooling_methods:
+  - text: Liquid cooling can be classified into direct cooling and indirect cooling.
+  utter_direct_liquid_cooling:
+  - text: Direct cooling (such as liquid immersion cooling) can cool the entire battery surface, which greatly contributes to the temperature uniformity of LIBs.
+  utter_direct_liquid_cooling_in_auto:
+  - text: Direct contact liquid cooling is not common in automobile battery cooling systems due to its high requirement on the waterproof performance of battery system, and electrical short circuit and electrochemical reaction may occur.
+  utter_indirect_cooling_methods:
+  - text: Indirect liquid cooling includes techniques such as tube cooling, cold plate cooling with mini/microchannels, jacket cooling, etc.
+  utter_direct_indirect_cooling_eff:
+  - text: Direct method has the higher efficiency.
+  utter_why_indirect_cooling_low_eff:
+  - text: The loss of efficiency in the indirect method is due to the resistance to heat transfer between the pipe containing the cooling liquid and the cell itself.
+  utter_common_liquids_for_cooling:
+  - text: Water, deionized water, glycol/water solutions and dielectric fluids such as fluorocarbons and PAO(Polyalphaolefin) are the heat transfer fluids commonly used in liquid cooling applications.
+  utter_li_operating_temp:
+  - text: The ideal operating temperature is between 16 and 25 degrees Celsius.
+  utter_can_battery_refrigerant_used:
+  - text: Yes, Refrigerant can be used. It is called Direct refrigerant cooling (DRC).
+  utter_DRC:
+  - text: Similar to active liquid cooling, DRS consists of an air conditioning loop with the refrigerant as a heat transfer fluid circulating throughout the battery pack.
+  utter_LIB_full_form:
+  - text: LIB stands for lithium-ion batteries.
+  utter_ESS_full_form:
+  - text: ESS is the short form of Energy Storage System
+  utter_causes_of_fault:
+  - text: The battery faults can be triggered by mechanical abuse, electrical abuse, thermal abuse, and ageing or degradation.
+  utter_cathode_materials:
+  - text: According to the structures, the cathode materials can be divided into three classes, i.e., layered oxides, spinel oxides, and polyanion oxides.
+  utter_layered_oxides:
+  - text: Layered oxides are mainly lithium metal oxides (LiMO2 where M represents metal elements including Ni, Co and Mn).
+  utter_tradeoff_layered_oxides:
+  - text: The layered oxides give the highest practical capacity but suffer from structural and chemical instabilities.
+  utter_different_layered_oxide_cathodes:
+  - text: The layered lithium cobalt oxide (LiCoO2, LCO) is the first oxide cathode investigated in LIBs. The other layered cathodes are lithium nickel cobalt manganese oxide (LiNi1-y-zCoyMnzO2, NCM) and lithium nickel cobalt aluminium oxide (LiNi1-y-zCoyAlzO2, NCA).
+  utter_cathode_in_EV_battery:
+  - text: NCM is now one of the most widely used cathode materials for LIBs in EVs due to its high energy density and low price.
+  utter_NCM_cathode_composition:
+  - text: The proportion of Ni, Co and Mn (i.e., the value of y and z in LiNi1-y-zCoyMnzO2) in NCM is a balance among chemical stability, structural stability, electrical conductivity, abundance of materials.
+  utter_tradeoff_nickel_cobalt_manganese:
+  - text: Co has higher electronic conductivity and lower resistance, resulting in excellent power performance. But Co is more toxic and more expensive than Ni and Mn.
+  utter_pros_cons_manganese:
+  - text: Among Ni, Co and Mn, Mn is the most abundant and thus the cheapest. Moreover, Mn has better chemical stability involving oxygen release from the lattice than Ni and Co.
+  utter_pros_cons_nickel:
+  - text: Ni offers reasonably good structural stability and high capacity but low stability. There is a trend to increase the Ni proportion and decrease the Co proportion in NCM such that the capacity of LIB can be increased and the cost can be cut down. However, this is at the expense of thermal stability reduction, which increases the risk of safety problems.
+  utter_ratio_NiCoMn_commercial_cathodes:
+  - text: The ratio (1-y-z):y:z in LiNi_1-y-zCoyMnzO2 in the commercial NCM cathode can be 1/3:1/3:1/3, 0.5:0.2:0.3, 0.6:0.2:0.2, 0.70:0.15:0.15, 0.8:0.1:0.1 and 0.85:0.075:0.075.
+  utter_spinel_oxide_cathode_examples:
+  - text: The most typical representative of spinel oxides is lithium manganese oxide (LiMn2O4, LMO).
+  utter_polyanion_oxide_cathode_examples:
+  - text: Lithium iron phosphate (LiFePO4, LFP) is the most common polyanion oxide cathode.
+  utter_common_anode_material:
+  - text: The commonplace commercial anode material includes carbonaceous materials and lithium titanate (Li4Ti5O12, LTO).
+  utter_carbonaceous_anode_types:
+  - text: According to the structures and the electrochemical properties, the carbonaceous materials can be categorized in different forms, including graphite, soft carbon (such as coke or carbon black) and hard carbon.
+  utter_SEI_layer:
+  - text: SEI stands for Solid Electrolyte Interphase.
+  utter_SEI_layer_thickness:
+  - text: A stable Solid Electrolyte Interphase (SEI) layer has thickness between 10 and 100 nm.
+  utter_SEI_composition:
+  - text: SEI is mainly composed of (CH2OCO2Li)2, LiCH2CH2OCO2Li, CH3OCO2Li, LiOH, Li2CO3, LiF.
+  utter_SEI_characteristics:
+  - text: The SEI film is a passivation layer which prevents the anode from further reacting with the electrolyte but increases the internal resistance of LIBs, causing larger polarization during the intercalation/deintercalation of li-ions.
+  utter_LCO_full_form:
+  - text: LCO stands for lithium, cobalt, oxide.
+  utter_LCO_chemical_formula:
+  - text: The chemical formula for LCO is LiCoO2
+  utter_LCO_anode_or_cathode:
+  - text: LCO is a cathode
+  utter_LCO_cell_voltage:
+  - text: A cell that has LCO cathode and graphite anode has a cell voltage of 3.7V to 3.9V.
+  utter_LCO_battery_energy_density:
+  - text: The energy density of LCO battery is between 150-190 Wh/kg.
+  utter_LCO_battery_life_cycle:
+  - text: Life cycle of LCO battery is around 500-1000 cycles.
+  utter_LMO_full_form:
+  - text: LMO is the short form for Lithium manganese oxide.
+  utter_LMO_chemical_formula:
+  - text: The chemical formula for LMO is LiMn2O4
+  utter_LMO_cell_voltage:
+  - text: A cell that has LMO cathode and graphite cathode has a cell voltage of 4.0V.
+  utter_LMO_energy_density:
+  - text: The energy density of LMO cells is 100-160Wh/kg.
+  utter_LMO_battery_life_cycle:
+  - text: The life cycle of LMO cell is 1000-1500 cycles.
+  utter_NCM_full_form:
+  - text: The full form of NCM is Lithium nickel cobalt manganese oxide.
+  utter_NCM_chemical_composition:
+  - text: The chemical composition NCM cathode is Li(Ni0.33Mn0.33Co0.33)O2
+  utter_clarify_NCM_battery_voltage:
+  - text: Do you mean the open circuit voltage of a battery pack made of NCM cells?
+  utter_NCM_battery_voltage:
+  - text: The open circuit voltage of a battery pack depends of how many cells are connected in series and parallel. Since I do not have his information, I cannot answer your question.
+  utter_NCM_cell_voltage:
+  - text: A battery is made of multiple cells connect in series and parallel. However, the open circuit voltage of one NCM cell is 3.8-4.0V.
+  utter_NCM_energy_density:
+  - text: The energy density of NCM lies between 140 to 200Wh/kg.
+  utter_NCM_life_cycle:
+  - text: The NCM cells have a typical life cycle of 1000-2000.
+  utter_LFP_full_form:
+  - text: LFP stands for lithium iron phosphate.
+  utter_LFP_chemical_composition:
+  - text: LFP cathode has following chemical formula LiFePO4
+  utter_LFP_cell_voltage:
+  - text: The open circuit voltage of battery with LFP cathode and graphite anode is 3.3V.
+  utter_LFP_energy_density:
+  - text: The specific energy of LFP cells is 90-140kW/kg.
+  utter_LFP_life_cycle:
+  - text: The LFP cells have a life cycle of greater than 2500 cycles.
+  utter_LTO_full_form:
+  - text: It is the short form of batteries that have lithium titanate oxide anode.
+  utter_is_LTO_anode:
+  - text: Yes, LTO is an anode that is made of lithium titanate oxide.
+  utter_LTO_chemical_formula:
+  - text: Chemical formula of LTO is Li4Ti5O12
+  utter_cathode_LTO_anode:
+  - text: One can use any of the LMO, NCM, LFP cathodes along with an LTO anode.
+  utter_LCO_cathode_with_LTO_anode:
+  - text: LCO cathode is generally not used with LTO anode
+  utter_LTO_cell_voltage:
+  - text: The open circuit voltage of LTO cell is 1.8-2.5V.
+  utter_LTO_life_cycle:
+  - text: LTO cells have a life of 6,000 to 27,000 cycles.
+  utter_LTO_specific_energy:
+  - text: The specific energy of cells with LTO anode is between 70-85Wh/kg
+  utter_electrolyte_role:
+  - text: The electrolyte is generally non-aqueous solution, which acts as a conductive pathway for transportation of li-ions between the electrodes.
+  utter_electrolyte_composition:
+  - text: Most of commercial electrolytes are electrolytic solutions which are lithium salts.
+  utter_Li_salts_used:
+  - text: Some typiclly lithium salts used are lithium hexafluorophosphate (LiPF6), lithium perchlorate (LiClO4), lithium hexafluoroarsenate monohydrate (LiAsF6), lithium triflate (LiTf, LiCF3SO3), and lithium tetrafluoroborate (LiBF4).
+  utter_Li_salts_dissolved_in:
+  - text: These salts are dissolved in aprotic organic carbonates such as propylene carbonate (PC, C4H6O3), ethers, ethylene carbonate (EC, C3H4O3), diethyl carbonate (DEC, C5H10O3), ethyl methyl carbonate (EMC, C4H8O3), dimethyl carbonate (DMC, C3H6O3), and their mixtures.
+  utter_separator:
+  - text: The separator is a highly porous (typically > 40% porosity) and very thin (less than 25 μm thick) permeable membrane.
+  utter_separator_role:
+  - text: The separator avoids internal short circuit (ISC) due to direct contact of electrodes.
+  utter_separator_allow_ions:
+  - text: Yes, separator is permeable to lithium ions.
+  utter_separator_composition:
+  - text: Typical commercially separators are single layer or multilayer polymer sheets made of polyolefin such as polyethylene (PE) and polypropylene (PP).
+  utter_faults_in_LIB:
+  - text: The faults in the LIB systems can be categorized into three classes, i.e., battery faults, sensor faults, and actuator faults.
+  utter_fault_types:
+  - text: From the view of time scale, the faults can be classified into two categories, i.e., sudden faults and gradual faults.
+  utter_battery_abuse_types:
+  - text: From the view of abuse conditions, the battery faults can be further differentiated in three types, i.e., mechanical abuse, electrical abuse, and thermal abuse.
+  utter_SEI_layer_decompose:
+  - text: If the battery's internal temperature rises beyond 90 degrees Celsius, the SEI layer decomposes.
+  utter_SEI_decomposition_reaction:
+  - text: One of the possible chemical reactions of SEI decomposition is (CH2OCO2Li)2->L3CO3+C2H4+CO2+1/2O2
+  utter_separator_meltdown:
+  - text: The separator layer melts when the battery's internal temperature reached beyond 130 degrees Celsius.
+  utter_cathode_decompose:
+  - text: Depending on the chemical composition of cathode, the decomposition can start at 150 degrees Celsius
+  utter_LCO_cathode_decompose:
+  - text: The LCO cathode decomposes between 220-500 degrees Celsius.
+  utter_LMO_cathode_decompose:
+  - text: The LMO cathode decomposes once the battery's internal temperature reaches 150-400 degrees Celsius
+  utter_NCM_cathode_decompose:
+  - text: The NCM cathode decomposes when the battery's internal temperature reaches beyond 175 degrees Celsius.
+  utter_NCA_cathode_decompose:
+  - text: The decomposition of NCA cathode begins when the battery's internal temperature goes beyond 160 degrees Celsius.
+  utter_LFP_cathode_decompose:
+  - text: The LFP cathode decomposes between battery's internal temperature of 190-310 degrees Celsius.
+  utter_mechanical_abuse_types:
+  - text: Mechanical abuse conditions include mechanical shock, drop, collision, crush, rollover, vibration and penetration.
+  utter_electrical_abuse:
+  - text: Electrical abuse conditions include external short circuit (ESC), overcharge and overdischarge.
+  utter_ISC_full_form:
+  - text: In battery parlance, ISC stands for internal short circuit.
+  utter_ESC_full_form:
+  - text: In battery terminology, ESC stand for eexternal short circuit.
+  utter_overcharge_condition:
+  - text: During the overcharge process, current is forced through the LIB cell after the voltage or SOC reaches its upper limit.
+  utter_worst_electrical_abuse:
+  - text: Among all abuse conditions, overcharge may be the most severe one since additional energy is added to the battery by the current.
+  utter_overcharge_cause:
+  - text: Overcharge may result from inconsistency of LIB cells in the system, malfunction of battery charger, incorrect voltage and/or current measurement, or inaccurate SOC estimation by battery management system (BMS).
+  utter_overcharge_outcome:
+  - text: During overcharge, it becomes difficult for li-ions to insert into the anode since it is over-lithiated. Filling a battery beyond full state-of-charge turns excess energy into heat and gas. With Li-ion, this can result in a deposit of unwanted materials. Prolonged over-charge causes permanent damage.
+  utter_over_lithiation_impact:
+  - text: Due to over-lithiation metallic lithium may deposit on the anode surface and propagate in dendrite-like (also called lithium plating) or fibre-like shapes, which can thicken the SEI layer, increase in the internal resistance, penetrate the separator and cause internal short circuit (ISC). Also, the deposited lithium may also react with the electrolyte to form a solid deposition of lithium carbonate (Li2CO3), which results in internal cell resistance increase and capacity loss.
+  utter_overcharge_impact_cathode:
+  - text: The cathode becomes over-delithiated, which may lead to irreversible structural damage and transitional metal (Ni, Mn and Co) dissolution with heat generation and oxygen release.
+  utter_overcharge_impact_electrolyte:
+  - text: Since the oxidation potential of the electrolyte is higher than that for complete lithium removal from the cathode, the electrolyte may also be oxidized on the cathode surface, with a distinct heat output.
+  utter_high_temperature_impact_on_separator:
+  - text: The heat can cause the melting of separator.
+  utter_reason_for_impedance_increase_with_temperature:
+  - text: The holes in the separator will be probably blocked, which impedes the transport of lithium ions. As a result, the cell resistance increases sharply.
+  utter_overdischarge_meaning:
+  - text: Overdischarge means a LIB cell is discharged below the lower voltage limit recommended by manufacturer.
+  utter_overdischarge_cause:
+  - text: The cause of overdischarge is similar to that of overcharge, which includes inconsistency among LIB cells in the system, incorrect voltage and/or current measurement, or inaccurate SOC estimation from BMS.
+  utter_over_charge_or_discharge_hazardous:
+  - text: Overcharge is more hazardous than over discharge.
+  utter_overdischarge_outcome:
+  - text: During overdischarge, the anode becomes over-delithiated and the SEI will decompose releasing gasses including carbon dioxide, carbon monoxide, and methane will be generated, leading to considerable swelling of the battery.
+  utter_overdischarge_impact:
+  - text: During overdischarge, the anode becomes over-delithiated and the SEI will decompose releasing gasses including carbon dioxide, carbon monoxide, and methane will be generated, leading to considerable swelling of the battery. Also, once the anode potential exceeds the dissolution potential of copper, the copper anodic current collector will dissolve as Cu2+ ions, which can migrate through the separator, deposit on internal cell components, form copper dendrites and even induce ISC.
+  utter_ESC_meaning:
+  - text: ESC means a low resistance path to connect the cathode and anode current collectors electrically is formed outside the battery.
+  utter_ESC_causes:
+  - text: ESC can be caused by either mechanical abuse such as deformation during car collision or electrical abuse such as electrolyte leakage from swelling due to gas generation during overcharge.
+  utter_ESC_impact:
+  - text: Although the heat generated on the external circuit does not heat the battery and the highest current is restricted by the li-ion diffusion in the electrolyte, the heat generation from side reactions such as the electrolyte decomposition during ESC could still lead to fast temperature rise and even thermal runaway.
+  utter_ISC_cause:
+  - text: Mechanical, electrical and thermal abuse can cause ISC.
+  utter_mech_abuse_cause_ISC:
+  - text: In mechanical abuse the separator may deform and fracture due to collision or penetration. This results in ISC.
+  utter_elect_abuse_cause_ISC:
+  - text: In electrical abuse the separator may be pierced by the growth of lithium dendrite due to overcharge or copper dendrite due to overdischarge resulting in ISC.
+  utter_therm_abuse_cause_ISC:
+  - text: At high temperatures the separator shrinks or even collapses resulting in ISC.
+  utter_separator_collapse:
+  - text: When the separator shrinks or collapse, the anode and the cathode come in contact with each other and cause ISC.
+  utter_factors_affecting_battery_life:
+  - text: The battery life is mainly determined by the use cycles of the battery.
+  utter_battery_life_importance:
+  - text: The bigger the battery capacity, the longer the time of usage.
+  utter_longest_life:
+  - text: The lifespan of a battery varies with how it is used, how it is maintained, the temperature & other factors.
+  utter_life_expectancy:
+  - text: Most manufacturers hold 5-8 years of warranty on their battery. The current prediction is that an electric car battery will last from 10-20 years before they need to be replaced.
+  utter_battery_fading:
+  - text: The aging process of a battery is cell-oxidation that occurs naturally as a part of usage & it cannot be reversed.
+  utter_capacity_loss:
+  - text: It is a phenomenon observed in batteries usage where the amount of charge a battery can deliver at the rated voltage decreases with usage.
+  utter_fading_and_capacity_loss_same:
+  - text: Yes, battery fading and capacity loss are one and the same.
+  utter_capacity_loss_cause:
+  - text: Capacity loss in batteries occurs due to various stress factors, such as temperature, C-rates & state of charge of batteries.
+  utter_capacity_loss_temperature_dependence:
+  - text: The capacity loss is temperature dependent in such a way that the aging rates increase with decreasing temperature below 25 degree celsius, while above 25 degree celsius aging is accelerated with increasing temperature.
+  utter_capacity_loss_C_rate:
+  - text: Higher C-rates lead to faster capacity loss per cycle.
+  utter_C_rate:
+  - text: Charge & discharge rate are often called as C-rate. It is a measure of the rate at which a battery is charged or discharged relative to its capacity.
+  utter_SoC:
+  - image: https://images.ctfassets.net/0fol1oltsp9p/4q8DqG0nbj30qLQGiWOGJ6/8192179266094cb554799d5e1122adbb/Measuring_Your_State_Of_Charge.jpg
+    text: State of charge (SoC) is the level of charge of an electric battery relative to its capacity. SoC is measured as percentage i.e, 0% is empty whereas 100% is full. An alternative form of SoC is depth of discharge (DoD).
+  utter_DoD:
+  - text: The depth of discharge is the inverse of state of charge i.e, 100% is empty whereas 0% is full.
+  utter_car_battery_life:
+  - text: The car, truck or SUV battery should last 6 years on an average. But there are factors like, extreme temperatures, humidity & heavy accessory loads put more burden on battery that reduce it to 3-4 years.
+  utter_battery_relacement_cost:
+  - text: Replacement ranges from $0 to $20,000 based on a range of factors. If a battery is in manufacturer's warranty typically 8 years or 100,000 miles then we get a replacement of battery at no extra cost.
+  utter_charger_types:
+  - text: Generally, there are three different kinds of chargers. They are Slow charger, Rapid charger, Fast charger.
+  utter_slow_charger:
+  - text: Slow charger is the most basic charger which is also known and overnight charger. The charge stays engaged and a full charge of an empty battery takes 14-16 hours.
+  utter_fast_charger_time_taken:
+  - text: At a charge rate of 1C, which a fast charger typically uses, an empty NiCd and NiMH charges in a little more than an hour.
+  utter_rapid_charger_time_taken:
+  - text: The rapid charger falls between the slow and fast charger and is used in consumer products. The charge time of an empty pack is 3-6 hours.
+  utter_coulombic_eff:
+  - text: Coulombic Efficiency defines the completeness by which electrons are transferred in an electrochemical system during charge and discharge. The higher the efficiency, the less stress there is on the battery and the longer it should live.
+  utter_highest_coulombic_eff:
+  - text: By far the best chemistry in Li-ion family in terms of Coulombic Efficiency is lithium titanate (LTO); it has a potential to deliver 10,000 cycles. However, it is expensive and has relatively less specific energy.
+  utter_1C_rate:
+  - text: A C-rate of 1C is also known as a one-hour discharge; 0.5C or C/2 is a two-hour discharge and 0.2C or C/5 is a 5-hour discharge.
+  utter_equalizing_charge:
+  - text: Stationary batteries are almost exclusively lead acid and some maintenance is required, one of which is equalizing charge. Applying a periodic equalizing charge brings all cells to similar levels by increasing the voltage to 2.50V/cell, or 10 percent higher than the recommended charge voltage.
+  utter_equalizing_charge_need:
+  - text: An equalizing charge is nothing more than a deliberate overcharge to remove sulfate crystals that build up on the plates over time. Left unchecked, sulfation can reduce the overall capacity of the battery and render the battery unserviceable in extreme cases. An equalizing charge also reverses acid stratification, a condition where acid concentration is greater at the bottom of the battery than at the top.
+  utter_equalizing_charge_condition:
+  - text: The battery must be kept cool and under close observation for unusual heat rise and excessive venting. The battery room must have good ventilation as the hydrogen gas emitted becomes explosive at a concentration of 4 percent.
+  utter_discharge_voltage_limits:
+  - text: Lead acid discharges to 1.75V/cell; nickel-based system to 1.0V/cell; and most Li-ion to 3.0V/cell.
+  utter_energy_spent:
+  - text: At this level, roughly 95 percent of the energy is spent.
+  utter_overcharge_lead_acid:
+  - text: Over-charging a lead acid battery can produce hydrogen sulfide, a colorless, poisonous and flammable gas that smells like rotten eggs.
+  utter_priority_BMS:
+  - text: The highest priority for the BMS is safety management, which must detect any critical failures and use alternative functions, or shutdown the system if the worst happens.
+  utter_intelligent_BMS_requirement:
+  - text: The current BMSs mainly monitor and control the battery system with fixed structure, which does not give full play to the optimal performance of the battery system.
+  utter_when_to_replace_battery:
+  - text: A pack should be replaced when the capacity drops below 80 percent. However, the end-of-life threshold may vary based on application, user preference or company policy.
+  utter_when_to_measure_capacity:
+  - text: Capacity measurement should be done every three months with active fleet batteries.
+  utter_digital_twin_li:
+  - text: Digital twin model of a battery is a virtual model created digitally for a physical battery entity object to simulate the behaviour of the battery in a realistic environment. It also enables the digitization of the entire process of design, production, operation and maintenance services for the battery system.
+  utter_digital_twin_requirement:
+  - text: For electric vehicles, the battery pack is a relatively costly system. In the process of battery design, management, operation, and maintenance, the rich knowledge representation contained in the virtual space can be used to simulate and portray the real process of the battery with very high fidelity.
+  utter_unusable_nicd_growth:
+  - text: With nickel-based batteries, the unusable part of the battery is often the result of crystalline formation, also known as 'memory'. A full discharge/charge cycle often restores the batteries to full service. A periodic full discharge while the battery is in the service keeps the crystallization under control and prevents damage to the separator.
+  utter_battery_voltage_dependence:
+  - text: The voltage of the battery depends on the chemistry of the cell.
+  utter_li_types_form_factor:
+  - text: There are three types of lithium cell as cylindrical, prismatic and pouch cell.
+  utter_li_technology_age:
+  - text: The history of lithium-ion batteries started in 1962. The first battery was a battery that could not be recharged after the initial discharging (primary battery). The materials were lithium for the negative electrode and manganese dioxide for the positive electrode. This battery was introduced on the market by Sanyo in 1972. Moli Energy developed the first rechargeable battery (secondary battery) in 1985. This battery was based on lithium (negative electrode) and molybdenum sulfide (positive electrode).
+  utter_first_li_battery_problem:
+  - text: The first Li-cell had safety problems due to the lithium on the negative electrode.
+  utter_first_li_cell_manufacturer:
+  - text: Sony developed the first rechargeable lithium-ion battery and introduced it on the market in 1991.
+  utter_unique_feature_first_li_battery:
+  - text: The unique feature about the first lithium cell was that the negative electrode's active material was carbon and that of the positive electrode was lithium cobalt oxide.
+  utter_li_cell_requirement:
+  - text: A lithium-ion battery should use materials for both electrodes that enable an intercalation and deintercalation of lithium and also have a high voltage potential.
+  utter_standard_charge_li_procedure:
+  - text: The standard charging or recharging process for lithium-ion batteries is CC-CV (constant current/ constant voltage).
+  utter_CC_CV_charging:
+  - text: First, the battery is charged to a certain maximum voltage with a constant current (CC). Then, it is charged with a constant voltage (CV) and a decreasing current. The charging process ends after a predetermined time has elapsed or when a certain current value has been reached.
+  utter_battery_capacity:
+  - text: Capacity describes the amount of electric charge a power source can deliver under specific discharge conditions. It depends on the discharging current, the cut-off voltage, the temperature, and the type and amount of active materials. The unit is Ah.
+  utter_energy_battery:
+  - text: The energy of a battery or a rechargeable battery is calculated as the product of capacity and average discharge voltage. The unit is Wh.
+  utter_specific_energy:
+  - text: Specific energy refers to the mass of the rechargeable battery and its unit is Wh/kg.
+  utter_energy_density:
+  - text: Energy density refers to the volume of the rechargeable battery and its unit is Wh/litre.
+  utter_efficiency_meaning:
+  - text: Efficiency is the energy released during discharging divided by the energy stored during charging.
+  utter_efficiency_li_cell:
+  - text: The efficiency of lithium-ion batteries is very high, usually above 95 %.
+  utter_rated_capacity:
+  - text: This is the cell's electrical capacity indicated as ampere-hours. In other words, it is the total charge a fully charged battery can produce in certain discharge conditions.
+  utter_self_discharge:
+  - text: It refers to the recoverable loss of capacity of a battery. This refers to how a battery or cell loses its charge over time, thus requiring recharging. Even though this is a normal occurrence, several factors such as the technology used and temperature can affect this rate.
+  utter_trickle_charge:
+  - text: This refers to a form of low level charging where the cell is connected continuously or intermittently to a constant power source that keeps it fully charged.
+  utter_primary_battery:
+  - text: These are batteries that are not rechargeable. The process through which they turn chemical energy into electrical energy is irreversible.
+  utter_secondary_battery:
+  - text: These cells can be recharged. This is because the electrochemical process can be reversed using electricity.
+  utter_li_form_factor:
+  - text: Lithium cell form factors are also known as battery configurations. This term refers to the shape of the battery. In Li-ion batteries, they come in four major configurations, namely coin/button cell, cylindrical, prismatic, and pouch.
+  utter_button_cell:
+  - text: These cells take the shape of a button or a coin. This cell design is favoured for its compact design which enables users to power various small devices such as watches, phones, car keys, security wands, medical aids, remote controls, and even small LED flashlights.
+  utter_button_cell_drawbacks:
+  - text: Their capacity is limited, and so they are not used for applications that require more power. The button battery design has a couple of drawbacks, such as the fact that it does not have a safety vent to let out any gases that might be produced in the cell. If you charge it too quickly, the battery can swell, so you have to be very careful not to exceed the recommended 10 to 16 hours charging time. Its small size also makes button cells a choking hazard, so precautionary measures must be taken to keep children from reaching them.
+  utter_energy_storage:
+  - text: Energy storages are defined as the devices that store the energy, deliver energy outside (discharge) and accept the energy from outside (charge).
+  utter_energy_storage_for_ev:
+  - text: There are several types of energy storages that have been proposed for electric vehicle and hybrid electric vehicle application. These energy storages mainly include chemical batteries, ultracapacitors or supercapacitors, and ultra-high-speed flywheels.
+  utter_energy_storage_requirement_for_ev:
+  - text: There are a number of requirements for energy storage applied in EV application such as specific energy, specific power, efficiency, maintenance requirement, cost, environmental adoption and friendliness, and safety.
+  utter_electrochemical_battery:
+  - text: Electrochemical batteries more commonly referred to as battery are electrochemical devices that convert electrical energy into potential chemical energy during charging and convert chemical energy into electrical energy during discharging.
+  utter_coulometric_capacity:
+  - text: Coulometric capacity is defined as the number of amp-hour gained when discharging the battery from a fully charged state until the terminal voltage drops to its cut-off voltage.
+  utter_capacity_large_discharge_rate:
+  - text: The capacity of a battery will become smaller with a large discharge current rate.
+  utter_thermodynamic_voltage:
+  - text: The thermodynamics voltage of a battery cell is closely associated with the energy released and the number of electrons transferred in the reaction.
+  utter_cell_battery_difference:
+  - text: A cell is the most fundamental electrochemical device that stores DC charge, while a Battery is a device that includes two or more components—cells, a battery management system (BMS), connectors, thermistors, and an enclosure.
+  utter_cell_capacity_actual:
+  - text: The actual capacity is a condition of a specific cell at a given moment in its life. It is measured by someone testing an actual cell, new or used, using the test limits specified by the manufacturer. A new cell should have an actual capacity that meets or exceeds the nominal capacity specified by its manufacturer. The actual capacity of an old cell is likely to be lower.
+  utter_cell_capacity_effective:
+  - text: The effective capacity of a cell is the charge it can store in actual use, in a given application, and at a given point in its life. The effective capacity of a Li-ion cell is reduced at high current levels or low temperature because it reaches the low-voltage cut-out sooner.
+  utter_amount_li_present:
+  - text: There is no bulk lithium metal in a good Li-ion cell. There are only individual lithium ions. If you were to open a good cell (which is not advisable), you would see no solid lithium metal. The lithium ions represent only about 2% of the mass of the cell.
+  utter_weak_cell:
+  - text: A weak cell is one that has lower capacity, higher series resistance, higher self-discharge current, and lower coulombic efficiency.
+  utter_coulombic_eff_variation:
+  - text: Coulombic efficiency drops significantly at cold temperatures and is somewhat worse at high discharge current.
+  utter_age_impact:
+  - text: As the cell ages, the coulombic efficiency remains pretty much constant until the end of life, at which point it starts dropping.
+  utter_nominal_DC_resistance:
+  - text: Nominal DC resistance is the DC resistance specified by the manufacturer, at room temperature, and 50% SoC.
+  utter_li_cell_constituents:
+  - text: For LIBs that are currently on the market, a lithium-containing transition metal oxide, such as LiCoO2, is used as the positive electrode, graphite is used as the negative electrode, and an organic electrolyte, in which a lithium salt is dissolved, is used as the electrolyte.
+  utter_specific_capacity_anode_li:
+  - text: The conventional anode material is graphite, which has a specific capacity of 372 mAh g-1.
+  utter_specific_capacity_anode_li_maximum:
+  - text: The highest theoretical specific capacity of anode is 4200 mAh g-1 to date.
+  utter_challenges_high_capacity_anode:
+  - text: 'Two major challenges exist in these new anode materials: large volume expansion and slow electron/ion transport'
+  utter_specific_capacity_limitation_anode:
+  - text: The Li-ion storage mechanism of graphite is based on the intercalation that the Li-ions insert/extract the planes of graphite. Li-ions can combine on every second carbon hexagon in the graphite sheet, which limits the number of Li-ions to one for every six carbon atoms, leading to a theoretical capacity of 372 mAh g-1
+  utter_reason_li_cells_life_cycles:
+  - text: The intercalation process is highly reversible, which contributes to a long cycling performance of over 1000 cycles.
+  utter_cell_to_battery:
+  - text: There are two connection types, parallel cell module and series cell module.
+  utter_parallel_cell_module:
+  - text: In parallel cell module (PCM), cells are connected in parallel firstly and then in series.
+  utter_series_cell_module:
+  - text: In series cell module (SCM), cells are connected in series firstly and then in parallel.
+  utter_parallel_module_drawbacks:
+  - text: PCM has better self-balance and reliability for an open circuit failure of battery cells, while facing the risk of overcharge and over discharge.
+  utter_series_module_drawbacks:
+  - text: SCM has the tolerance to a short failure, while higher component costs.
+  utter_parameter_variation_battery_pack:
+  - text: The quantification of cell-to-cell parameter variations within a batch of cells has been the topic of multiple studies in the literature, and most found that the initial parameters of resistance and capacity are independent and follow Gaussian distributions.
+  utter_parameter_variation_battery_pack_old_cell:
+  - text: The aged cells showed a strong increased parameter spread, which fitted Weibull distributions.
+  utter_cell_connection_notation:
+  - text: With two or more cells, we use a standard notation to specify the cell arrangement, such as 4S for four cells in series, or 3P for three cells in parallel.
+  utter_series_first_connection:
+  - text: The order of S and P in the notation for the arrangement indicates whether cells are first connected in series or parallel. 3P4S (parallel-first) means that three cells are connected directly in parallel-first to form a block; later, four such blocks are connected in series. 4S3P (series-first) means that four cells are connected in series-first, to form a string; later. three such strings are connected in parallel.
+  utter_detect_cell_imbalance:
+  - text: To balance a string, the BMS looks at the cell voltages to decide which cells are out of balance. However, because the OCV versus SoC curve is not a straight line, the difference in voltage between two cells is not directly proportional to the difference in their charge.
+  utter_detect_cell_imbalance_challenge:
+  - text: For NMC cells, it's hard to detect a 1% imbalance, except below 5% SoC; a 10% imbalance is easily detectable, except around 35% SoC. For LFP cells, a 1% imbalance is easily detected below 10% SoC and above 95%. Everywhere else, it's pretty much undetectable; at 50% SoC, only a terrible imbalance of 30% can be detected.
+  utter_electrolyte_characteristics:
+  - text: 'Electrolyte should have: 1. Sufficient chemical and electrochemical stability   2. High ionic conductivity   3. Acceptable operational and environmental safety'
+  utter_electrolyte_stability:
+  - text: Electrolyte solutions must be stable at highly oxidative potentials at a battery cathode and at highly reductive potentials at a battery anode during charging.
+  utter_achieving_electrolyte_stability:
+  - text: Generally speaking, stronger bonds connecting the atoms result in higher stability of molecules present in an electrolyte.
+  utter_cost_of_electrolyte:
+  - text: The typical material cost of the electrolyte in a battery does not exceed 10% of the total cost of all its active and inactive components.
+  utter_common_li_electrolyte:
+  - text: Almost all commercial lithium-ion batteries use the same electrolyte. This is 1.2 M (1.2 moles per litre) solution of lithium hexafluorophosphate (LiFP6) in a mixture of ethylene carbonate and ethyl methyl carbonate. Typically, some additives, like vinylene carbonate (VC), are used in order to improve the formation of stable and ionically conductive passive layers on negative electrodes (the so-called SEI).
+  utter_electrolyte_conductivity:
+  - text: The LiPF6 electrolytes has a conductivity slightly exceeding 10 mS/cm at room temperature.
+  utter_LiPF6_oxidation_potential:
+  - text: Electrochemical stability of > 4.8 V versus that of the Li/Li+ redox pair, which is sufficient for the presently used cathodes based on Li1-xCoO2.
+  utter_LiPF6_electrolyte_decomposition_temperature:
+  - text: This electrolyte undergoes decomposition above 70◦C.
+  utter_LiPF6_reaction_water:
+  - text: LiPF6 is very sensitive to traces of water—hydrolysis reactions take place, resulting in the emission of harmful hydrogen fluoride.
+  utter_define_electrolyte:
+  - text: An electrolyte is by definition a substance that upon dissolving in a polar solvent forms a system in which there is freedom of ionic movement. Thus, ionic conductivity is possible. These days such a definition is too narrow, as we now know that not only polar solvents but also weakly polar solvents enable freedom of ionic movement. Polymer matrices can achieve it too, as well as molten salts. That is why in electrochemical or battery jargon, the whole system containing ions and in which ions can move freely is called an electrolyte. Thus, an electrolyte for lithium-ion (Li-ion) cells is not only the lithium salt but the whole system, including the solvent and/or the solvent mixture as well as possible additives.
+  utter_electrolyte_influence_battery:
+  - text: The electrolytes influence the storage and operating temperatures, limited directly by the thermal stability of the electrolyte, both in the case of solvents and salts. It also influences charge-discharge cycle efficiency (ratio between the energy taken in during charge and the energy retrieved during discharge), affected directly by electrolyte conductivity and lithium cation transference number and possibly affected by the solid-electrolyte interphase (SEI) layer resistance.
+  utter_different_li_chemistry:
+  - text: Lithium Cobalt Oxide(LiCoO2)-LCO, Lithium Manganese Oxide(LiMn2O4)-LMO, Lithium Nickel Manganese Cobalt Oxide(LiNiMnCoO2)-NMC, Lithium Iron Phosphate(LiFePO4)-LFP, Lithium Nickel Cobalt Aluminium Oxide(LiNiCoAlO2)-NCA, Lithium Titanate(Li2TiO3)-LTO
+  utter_best_chemistry:
+  - text: NCA is the best in terms of storing the more capacity compared to other chemistries i.e., highest specific energy. Because adding aluminium to the lithium nickel oxide gives more stability to the chemistry
+  utter_reason_for_low_capacity:
+  - text: One of the main reasons is formation of SEI (Solid Electrolyte Interface) on anode.
+  utter_reason_for_low_specific_power:
+  - text: LMO and LFP are more preferable due to their lower internal resistances. These chemistries also give high thermal stability.
+  utter_more_longevity:
+  - text: LTO has more lifespan even though it has low capacity.
+  utter_popular_chemistry_mobile:
+  - text: LCO is the popular choice in mobile phones and laptops.
+  utter_anode:
+  - text: The electrode of a battery that releases electrons during discharge is called anode
+  utter_cathode:
+  - text: The electrode that absorbs the electrons is the cathode
+  utter_li_cathode_material:
+  - text: Metal oxides derived from cobalt, nickel, manganese, iron, aluminium on aluminium foil is used as the cathode
+  utter_li_anode_material:
+  - text: Carbon based material on copper foil is used as the anode.
+  utter_li_electrolyte_material:
+  - text: Lithium salt in an organic solvent is used as the electrolyte.
+  utter_lead_acid_cathode_material:
+  - text: Lead dioxide (Chocolate brown) is used as the cathode.
+  utter_lead_acid_anode_material:
+  - text: Gray lead (spongy when formed) is used as the anode.
+  utter_lead_acid_electrolyte_material:
+  - text: Sulphuric acid is used as the electrolyte.
+  utter_alkaline_battery_cathode_material:
+  - text: Manganese dioxide is used as the cathode.
+  utter_alkaline_battery_anode_material:
+  - text: Zinc is used as the anode.
+  utter_alkaline_battery_electrolyte_material:
+  - text: Aqueous alkaline is used as the electrolyte.
+  utter_li_voltage_at_full_charge:
+  - text: Li-ion with the traditional cathode materials of cobalt, nickel, manganese and aluminium typically charge to 4.20V/cell. The tolerance is +/-50mV/cell. Some nickel-based varieties charge to 4.10V/cell; high-capacity Li-ion may go to 4.30V/cell and higher.
+  utter_at_full_charge:
+  - text: When the battery reaches the full charge, it hits the voltage threshold and the current drops to 3 percent of the rated current
+  utter_temperature_rise_during_charging:
+  - text: Some Li-ion packs may experience a temperature rise of about 5◦C (9◦F) when reaching full charge
+  utter_temperature_rise_during_charging_reason:
+  - text: This could be due to the protection circuit and/or elevated internal resistance.
+  utter_temperature_rise_above_5_degree:
+  - text: Discontinue using the battery or charger if the temperature rises more than 10◦C (18◦F) under moderate charging speeds.
+  utter_capacity_change_using_different_charger:
+  - text: Some lower-cost consumer chargers may use the simplified “charge-and-run” method that charges a lithium-ion battery in one hour or less without going to the Stage 2 saturation charge. “Ready” appears when the battery reaches the voltage threshold at Stage 1. State-of-charge (SoC) at this point is about 85 percent, a level that may be sufficient for many users. Also, Certain industrial chargers set the charge voltage threshold lower on purpose to prolong battery life.
+  utter_lead_acid_application:
+  - text: Wheel chairs, Scooters and golf cars mostly use lead acid batteries.
+  utter_li_advantage:
+  - text: The advantages are lower cycle cost because of longer life, lower maintenance and Li-ion can be left at any state of charge without adverse side effects.
+  utter_need_full_discharge:
+  - text: An occasional full discharge is needed in Nickel based batteries to prevent memory effect.
+  utter_memory_effect:
+  - text: Nickel cadmium batteries would remember how much energy was drawn on previous discharges and would deliver the same amount on repeated discharges. If more was demanded, the voltage drops abruptly as if to protest against imposed over time.
+  utter_prevent_sulfation:
+  - text: Lead acid batteries require a saturated charge to prevent sulfation.
+  utter_sulfation:
+  - text: Formation of small sulfate crystals is known as sulfation.
+  utter_clarify:
+  - text: What do you want to know?
+  - text: Please clarify what you want to know
+  utter_default:
+  - text: Sorry, could you please repharase?
+  - text: |
+        My bad, I couldn't really understand.
+        Could you rephrase?
+  - text: Sorry, I didn't get that. Can you rephrase?
 
 session_config:
   session_expiration_time: 60
