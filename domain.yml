@@ -12,6 +12,7 @@ intents:
    - amount_li_present
    - anode
    - anode_negative_electrode_difference
+   - appreciation
    - at_full_charge
    - batt_at_high_temperature
    - batt_chem
@@ -83,6 +84,7 @@ intents:
    - direct_liquid_cooling_in_auto
    - discharge_voltage_limits
    - DoD
+   - doing_status
    - DRC
    - efficiency_li_cell
    - efficiency_meaning
@@ -352,12 +354,23 @@ responses:
     text: 'Here is something to cheer you up:'
   utter_did_that_help:
   - text: Did that help you?
+  utter_appreciation:
+  - text: My pleasure😊
   utter_happy:
-  - text: Great, carry on!
+  - text: Great👍, carry on!
+  - text: Amazing✨, go on!
+  - text: Nice to hear that!
+  utter_affirm:
+  - text: 😎
   utter_goodbye:
   - text: Bye
   utter_iamabot:
   - text: I am Lisa, a Conversational AI to answer you anything related to battery.
+  utter_doing_status:
+  - text: I am doing fine, how about you?
+  - text: I am doing great. Thanks for asking.
+  - text: Great, how about you?
+  - text: Just chilling. How about you?
   utter_thermal_management:
   - text: The temperature management inside the battery is called thermal management. Its function is to equalize and keep the temperature of the battery cells within a reasonable range.
   utter_how_thermal_management:

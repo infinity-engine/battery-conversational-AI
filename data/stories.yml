@@ -9,6 +9,8 @@ stories:
     steps:
       - intent: about_chatbot
       - action: utter_iamabot
+      - intent: doing_status
+      - action: utter_doing_status
       - intent: chatbot_inventor
       - action: utter_chatbot_inventor
   - story: ask_query
@@ -30,6 +32,8 @@ stories:
       - action: utter_did_that_help
       - intent: deny
       - action: utter_goodbye
+      - intent: affirm
+      - action: utter_affirm
   - story: batt type
     steps:
       - intent: batt_type

@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # rasa training data
-.rasa/*
+/.rasa/*
 models/*
 
 # Distribution / packaging

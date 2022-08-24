@@ -5,7 +5,6 @@ nlu:
     examples: |
       - who are you
       - tell me about you
-      - what's up
       - can i ask about you
       - tell me something about you
       - hey dude, how is it going to day
@@ -65,6 +64,7 @@ nlu:
       - correct
       - okay
       - okk
+      - ok
 
   - intent: deny
     examples: |
@@ -121,6 +121,27 @@ nlu:
   #     - What do you mean by [recycling of battery](question)
   #     - What is [intercalation](question)
   #     - What is [parasitic voltage](question)
+  - intent: doing_status
+    examples: |
+      - how you doing today
+      - how are you
+      - what's up
+      - what is up with you
+      - what's the matter with you
+  - intent: appreciation
+    examples: |
+      - thank you
+      - ty
+      - i would like to appreciate you
+      - I'm so grateful
+      - I appreciate it
+      - I owe you one
+      - Please accept my deepest gratitude
+      - This has been such a blessing
+      - Cheers
+      - That's so kind of you
+      - Much appreciated
+      - Your support means the world
   - intent: batt_type
     examples: |
       - what are different types of battery
