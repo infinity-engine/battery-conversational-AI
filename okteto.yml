@@ -1,5 +1,5 @@
 name: chatBot
-command: bash]
+command: bash
 sync:
   - .:/app
 forward:

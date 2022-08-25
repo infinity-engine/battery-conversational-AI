@@ -13,6 +13,20 @@ services:
     - '5006:5006'
     networks:
     - all
+  
+  rasa-action-server:
+    image: rasa-server-okteto:latest
+    working_dir: /app
+    build: "./"
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    - ./data:/app/data
+    command: ["rasa","run","actions","--actions","actions","--debug","--cors","*"]
+    ports:
+    - '5055:5055'
+    networks:
+    - all
 
 networks:
   all:
