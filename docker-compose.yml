@@ -16,13 +16,13 @@ services:
   
   rasa-action-server:
     image: rasa-server-okteto:latest
-    working_dir: /app
     build: "./"
     restart: always
     volumes:
     - ./actions:/app/actions
     - ./data:/app/data
-    command: ["rasa","run","actions","--actions","actions","--debug","--cors","*"]
+    command: ["rasa","run","actions","--actions","actions","--debug","--cors","*","--port","5055"]
+    working_dir: /app
     ports:
     - '5055:5055'
     networks:

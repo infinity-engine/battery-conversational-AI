@@ -21,3 +21,8 @@ rules:
   steps:
   - intent: appreciation
   - action: utter_appreciation
+
+- rule:
+  steps:
+  - intent: nlu_fallback
+  - action: action_get_wiki_data

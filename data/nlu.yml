@@ -65,6 +65,8 @@ nlu:
       - okay
       - okk
       - ok
+      - great
+      - nice
 
   - intent: deny
     examples: |
