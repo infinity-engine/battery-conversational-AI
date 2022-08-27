@@ -8,7 +8,7 @@ This will create an api which you can integrate in your project.
 
 ## Authors
 [Koushik Samanta](https://github.com/infinity-engine/)
-
+[Pratik Rana](https://www.linkedin.com/in/pratik-rana-connect)
 
 
 ## Deployment
